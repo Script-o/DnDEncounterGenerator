@@ -1,0 +1,12 @@
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\EncounterGenerator.Domain\bin\Debug\net8.0\EncounterGenerator.Domain.deps.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\EncounterGenerator.Domain\bin\Debug\net8.0\EncounterGenerator.Domain.dll
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\EncounterGenerator.Domain\bin\Debug\net8.0\EncounterGenerator.Domain.pdb
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\EncounterGenerator.Domain\obj\Debug\net8.0\EncounterGenerator.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\EncounterGenerator.Domain\obj\Debug\net8.0\EncounterGenerator.Domain.AssemblyInfoInputs.cache
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\EncounterGenerator.Domain\obj\Debug\net8.0\EncounterGenerator.Domain.AssemblyInfo.cs
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\EncounterGenerator.Domain\obj\Debug\net8.0\EncounterGenerator.Domain.csproj.CoreCompileInputs.cache
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\EncounterGenerator.Domain\obj\Debug\net8.0\EncounterGenerator.Domain.sourcelink.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\EncounterGenerator.Domain\obj\Debug\net8.0\EncounterGenerator.Domain.dll
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\EncounterGenerator.Domain\obj\Debug\net8.0\refint\EncounterGenerator.Domain.dll
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\EncounterGenerator.Domain\obj\Debug\net8.0\EncounterGenerator.Domain.pdb
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\EncounterGenerator.Domain\obj\Debug\net8.0\ref\EncounterGenerator.Domain.dll
