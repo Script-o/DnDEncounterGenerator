@@ -3239,9 +3239,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.App\\DnDEncounterGenerator.App\\DnDEncounterGenerator.App.csproj",
-      "projectName": "DnDEncounterGenerator.App",
-      "projectPath": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.App\\DnDEncounterGenerator.App\\DnDEncounterGenerator.App.csproj",
+      "projectUniqueName": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.App\\DnDEncounterGenerator.App\\DnDEncounterGenerator.ConsoleApp.csproj",
+      "projectName": "DnDEncounterGenerator.ConsoleApp",
+      "projectPath": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.App\\DnDEncounterGenerator.App\\DnDEncounterGenerator.ConsoleApp.csproj",
       "packagesPath": "C:\\Users\\Jon\\.nuget\\packages\\",
       "outputPath": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.App\\DnDEncounterGenerator.App\\obj\\",
       "projectStyle": "PackageReference",

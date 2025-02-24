@@ -1,17 +1,18 @@
-﻿using System;
+﻿using DnDEncounterGenerator.ConsoleApp;
+using DnDEncounterGenerator.Data;
+using EncounterGenerator.Domain;
+using System;
 
-namespace EncounterGenerator.App
+namespace DnDEncounterGenerator.ConsoleApp
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
-            var folder = Environment.SpecialFolder.LocalApplicationData;
-            var path = Environment.GetFolderPath(folder);
-
-            Console.WriteLine(path);
+            //DbCommands.CreateMonster("Ghost");
+            DbCommands.ViewAllMonstersConsole();
+            //DbCommands.UpdateMonsterByName("Orc", "New Orc");
+            //DbCommands.DeleteMonsterByName("New Orc");
         }
     }
 }

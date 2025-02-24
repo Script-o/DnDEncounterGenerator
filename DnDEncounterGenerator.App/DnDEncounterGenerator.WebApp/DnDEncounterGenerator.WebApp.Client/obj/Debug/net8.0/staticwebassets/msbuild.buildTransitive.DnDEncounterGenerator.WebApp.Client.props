@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\DnDEncounterGenerator.WebApp.Client.props" />
+</Project>

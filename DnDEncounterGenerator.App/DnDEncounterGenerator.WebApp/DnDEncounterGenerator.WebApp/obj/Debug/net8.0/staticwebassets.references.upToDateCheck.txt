@@ -1,0 +1,7 @@
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\DnDEncounterGenerator.WebApp\DnDEncounterGenerator.WebApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\DnDEncounterGenerator.WebApp\DnDEncounterGenerator.WebApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\DnDEncounterGenerator.WebApp\DnDEncounterGenerator.WebApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\DnDEncounterGenerator.WebApp\DnDEncounterGenerator.WebApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\DnDEncounterGenerator.WebApp\DnDEncounterGenerator.WebApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\DnDEncounterGenerator.WebApp\DnDEncounterGenerator.WebApp.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.App\DnDEncounterGenerator.WebApp\DnDEncounterGenerator.WebApp.Client\obj\Debug\net8.0\staticwebassets.build.json

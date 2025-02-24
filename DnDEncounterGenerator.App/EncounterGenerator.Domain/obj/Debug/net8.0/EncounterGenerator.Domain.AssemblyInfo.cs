@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EncounterGenerator.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+070541a33f100ebee3656f2d51575019b5abb818")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc4ab350bff8aa282de5aa55f08dd0b9de19159c")]
 [assembly: System.Reflection.AssemblyProductAttribute("EncounterGenerator.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EncounterGenerator.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

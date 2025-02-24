@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "DnDEncounterGenerator.App\\DnDEncounterGenerator.ConsoleApp.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "DnDEncounterGenerator.WebApp\\DnDEncounterGenerator.WebApp\\DnDEncounterGenerator.WebApp.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      }
+    ]
+  }
+]

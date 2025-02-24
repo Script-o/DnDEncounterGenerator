@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.App\\DnDEncounterGenerator.WebApp\\DnDEncounterGenerator.WebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DnDEncounterGenerator.WebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\DnDEncounterGenerator.WebApp.03hqp09pip.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.App\\DnDEncounterGenerator.WebApp\\DnDEncounterGenerator.WebApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.App\\DnDEncounterGenerator.WebApp\\DnDEncounterGenerator.WebApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.App\\DnDEncounterGenerator.WebApp\\DnDEncounterGenerator.WebApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.App\\DnDEncounterGenerator.WebApp\\DnDEncounterGenerator.WebApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DnDEncounterGenerator.WebApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DnDEncounterGenerator.WebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.DnDEncounterGenerator.WebApp.props",
+      "PackagePath": "build\\DnDEncounterGenerator.WebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.DnDEncounterGenerator.WebApp.props",
+      "PackagePath": "buildMultiTargeting\\DnDEncounterGenerator.WebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.DnDEncounterGenerator.WebApp.props",
+      "PackagePath": "buildTransitive\\DnDEncounterGenerator.WebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
