@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DnDEncounterGenerator.Data.Migrations
 {
     [DbContext(typeof(MonsterContext))]
-    [Migration("20250221192227_initalcreate")]
-    partial class initalcreate
+    [Migration("20250225170112_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

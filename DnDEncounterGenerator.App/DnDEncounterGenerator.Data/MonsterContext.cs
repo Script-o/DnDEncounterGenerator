@@ -1,5 +1,6 @@
 ﻿using EncounterGenerator.Domain;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 using System.Threading;
@@ -20,7 +21,7 @@ namespace DnDEncounterGenerator.Data
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite($"Data Source={DbPath}");
+            => options.UseSqlite($"Data Source=Database\\Monsters.db");
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
