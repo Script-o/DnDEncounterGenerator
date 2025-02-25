@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "DnDEncounterGenerator.Client",
   "resources": {
-    "hash": "sha256-op7BDEb7rNIIuEThQntH269bR8C4Tb+GujY1u+sXdIE=",
+    "hash": "sha256-aHnHq+NOsp+SV+5n4vmkMQT+E1zsDuxeQF4BMLcJar4=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w="
     },
@@ -209,10 +209,10 @@
       "mscorlib.wasm": "sha256-RAf5jgXLg+06C4tJ3CabxAZaVjCN2/+E6fxRjRN8yHk=",
       "netstandard.wasm": "sha256-KCAE8RQwTurP5pGnGF819qf9sK++2O0rXzt6tOjlfi8=",
       "System.Private.CoreLib.wasm": "sha256-LQqLbHgeEX4HONx7GwIxGgmzIXP6n2OPxqnq+/4Tyqk=",
-      "DnDEncounterGenerator.Client.wasm": "sha256-Y47ZEIKqSGGzeUcjq5oEfHs0Y2/F5isMI8Iq+sh6ODI="
+      "DnDEncounterGenerator.Client.wasm": "sha256-FX/i1V6yV5ydAR4MXr+B98Z/XZnq+X13NTxavVLRgQM="
     },
     "pdb": {
-      "DnDEncounterGenerator.Client.pdb": "sha256-EYG5Kcql3BsaAohOAbjevmBf9FWkdta2jFoVsU5BUzk="
+      "DnDEncounterGenerator.Client.pdb": "sha256-dJ9+F8zbUqz4f8kjqfUz9FlJpJXOUFOm2vXHYTvkm8s="
     }
   },
   "cacheBootResources": true,

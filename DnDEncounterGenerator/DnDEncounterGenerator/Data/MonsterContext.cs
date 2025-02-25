@@ -29,19 +29,43 @@ namespace DnDEncounterGenerator.Data
                     {
                         MonsterId = 1,
                         Name = "Orc",
-                        Health = 10
+                        ArmorClass = 10,
+                        HitPoints = 10,
+                        Speed = 20,
+                        Strength = 10,
+                        Dexterity = 10,
+                        Constitution = 10,
+                        Intelligence = 10,
+                        Wisdom = 10,
+                        Charisma = 10
                     },
                     new Monster
                     {
                         MonsterId = 2,
                         Name = "Goblin",
-                        Health = 8
+                        ArmorClass = 10,
+                        HitPoints = 10,
+                        Speed = 20,
+                        Strength = 10,
+                        Dexterity = 10,
+                        Constitution = 10,
+                        Intelligence = 10,
+                        Wisdom = 10,
+                        Charisma = 10
                     },
                     new Monster
                     {
                         MonsterId = 3,
                         Name = "Kobold",
-                        Health = 6
+                        ArmorClass = 10,
+                        HitPoints = 10,
+                        Speed = 20,
+                        Strength = 10,
+                        Dexterity = 10,
+                        Constitution = 10,
+                        Intelligence = 10,
+                        Wisdom = 10,
+                        Charisma = 10
                     }
                 );
         }

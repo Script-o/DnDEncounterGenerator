@@ -2,6 +2,7 @@
 using DnDEncounterGenerator.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DnDEncounterGenerator.Migrations
 {
     [DbContext(typeof(MonsterContext))]
-    partial class MonsterContextModelSnapshot : ModelSnapshot
+    [Migration("20250225203153_ExpandingTableContents")]
+    partial class ExpandingTableContents
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.2");
@@ -44,8 +47,9 @@ namespace DnDEncounterGenerator.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Speed")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Speed")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Strength")
                         .HasColumnType("INTEGER");
@@ -68,7 +72,7 @@ namespace DnDEncounterGenerator.Migrations
                             HitPoints = 10,
                             Intelligence = 10,
                             Name = "Orc",
-                            Speed = 20,
+                            Speed = "20 ft",
                             Strength = 10,
                             Wisdom = 10
                         },
@@ -82,7 +86,7 @@ namespace DnDEncounterGenerator.Migrations
                             HitPoints = 10,
                             Intelligence = 10,
                             Name = "Goblin",
-                            Speed = 20,
+                            Speed = "20 ft",
                             Strength = 10,
                             Wisdom = 10
                         },
@@ -96,7 +100,7 @@ namespace DnDEncounterGenerator.Migrations
                             HitPoints = 10,
                             Intelligence = 10,
                             Name = "Kobold",
-                            Speed = 20,
+                            Speed = "20 ft",
                             Strength = 10,
                             Wisdom = 10
                         });

@@ -20,9 +20,57 @@
         </div>
     </div>
     <div class="row">
+        <label for="ArmorClass" class="col-4 col-form-label">Armor Class</label>
+        <div class="col-8">
+            <input id="ArmorClass" name="ArmorClass" type="text" class="form-control" @bind="@NewMonster.ArmorClass">
+        </div>
+    </div>
+    <div class="row">
         <label for="Health" class="col-4 col-form-label">Health</label>
         <div class="col-8">
-            <input id="Health" name="Health" type="text" class="form-control" @bind="@NewMonster.Health">
+            <input id="Health" name="Health" type="text" class="form-control" @bind="@NewMonster.HitPoints">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Speed" class="col-4 col-form-label">Speed</label>
+        <div class="col-8">
+            <input id="Speed" name="Speed" type="text" class="form-control" @bind="@NewMonster.Speed">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Strength" class="col-4 col-form-label">Strength</label>
+        <div class="col-8">
+            <input id="Strength" name="Strength" type="text" class="form-control" @bind="@NewMonster.Strength">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Dexterity" class="col-4 col-form-label">Dexterity</label>
+        <div class="col-8">
+            <input id="Dexterity" name="Dexterity" type="text" class="form-control" @bind="@NewMonster.Dexterity">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Constitution" class="col-4 col-form-label">Constitution</label>
+        <div class="col-8">
+            <input id="Constitution" name="Constitution" type="text" class="form-control" @bind="@NewMonster.Constitution">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Intelligence" class="col-4 col-form-label">Intelligence</label>
+        <div class="col-8">
+            <input id="Intelligence" name="Intelligence" type="text" class="form-control" @bind="@NewMonster.Intelligence">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Wisdom" class="col-4 col-form-label">Wisdom</label>
+        <div class="col-8">
+            <input id="Wisdom" name="Wisdom" type="text" class="form-control" @bind="@NewMonster.Wisdom">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Charisma" class="col-4 col-form-label">Charisma</label>
+        <div class="col-8">
+            <input id="Charisma" name="Charisma" type="text" class="form-control" @bind="@NewMonster.Charisma">
         </div>
     </div>
     <div class="form-group row">
@@ -46,9 +94,16 @@ else
             <table class="table table-striped table-hover table-bordered table-light border-dark">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Monster Name</th>
-                        <th scope="col">Health</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">AC</th>
+                        <th scope="col">HP</th>
+                        <th scope="col">Speed</th>
+                        <th scope="col">STR</th>
+                        <th scope="col">DEX</th>
+                        <th scope="col">CON</th>
+                        <th scope="col">INT</th>
+                        <th scope="col">WIS</th>
+                        <th scope="col">CHA</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
                     </tr>
@@ -60,9 +115,16 @@ else
                         @if (!@EditRecord)
                         {
                             <tr>
-                                <th scope="row">@monster.MonsterId</th>
                                 <td>@monster.Name</td>
-                                <td>@monster.Health</td>
+                                <td>@monster.ArmorClass</td>
+                                <td>@monster.HitPoints</td>
+                                <td>@monster.Speed ft</td>
+                                <td>@monster.Strength</td>
+                                <td>@monster.Dexterity</td>
+                                <td>@monster.Constitution</td>
+                                <td>@monster.Intelligence</td>
+                                <td>@monster.Wisdom</td>
+                                <td>@monster.Charisma</td>
                                 <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => ShowEditForm(monster)">Edit</button></td>
                                 <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => DeleteMonster(monster)">Delete</button></td>
                             </tr>
@@ -72,9 +134,16 @@ else
                             if (@MonsterToUpdate is not null && @MonsterToUpdate.MonsterId == @monster.MonsterId)
                             {
                                 <tr>
-                                    <th scope="row">@monster.MonsterId</th>
                                     <td><input id="Name" name="Name" type="text" class="form-control" @bind="@MonsterToUpdate.Name" /></td>
-                                    <td><input id="Health" name="Health" type="text" class="form-control" @bind="@MonsterToUpdate.Health" /></td>
+                                    <td><input id="ArmorClass" name="ArmorClass" type="text" class="form-control" @bind="@MonsterToUpdate.ArmorClass" /></td>
+                                    <td><input id="HitPoints" name="HitPoints" type="text" class="form-control" @bind="@MonsterToUpdate.HitPoints" /></td>
+                                    <td><input id="Speed" name="Speed" type="text" class="form-control" @bind="@MonsterToUpdate.Speed" /></td>
+                                    <td><input id="Strength" name="Strength" type="text" class="form-control" @bind="@MonsterToUpdate.Strength" /></td>
+                                    <td><input id="Dexterity" name="Dexterity" type="text" class="form-control" @bind="@MonsterToUpdate.Dexterity" /></td>
+                                    <td><input id="Constitution" name="Constitution" type="text" class="form-control" @bind="@MonsterToUpdate.Constitution" /></td>
+                                    <td><input id="Intelligence" name="Intelligence" type="text" class="form-control" @bind="@MonsterToUpdate.Intelligence" /></td>
+                                    <td><input id="Wisdom" name="Wisdom" type="text" class="form-control" @bind="@MonsterToUpdate.Wisdom" /></td>
+                                    <td><input id="Charisma" name="Charisma" type="text" class="form-control" @bind="@MonsterToUpdate.Charisma" /></td>
                                     <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="@UpdateMonster">Save</button></td>
                                     <td></td>
                                 </tr>
@@ -82,9 +151,16 @@ else
                             else
                             {
                                 <tr>
-                                    <th scope="row">@monster.MonsterId</th>
                                     <td>@monster.Name</td>
-                                    <td>@monster.Health</td>
+                                    <td>@monster.ArmorClass</td>
+                                    <td>@monster.HitPoints</td>
+                                    <td>@monster.Speed</td>
+                                    <td>@monster.Strength</td>
+                                    <td>@monster.Dexterity</td>
+                                    <td>@monster.Constitution</td>
+                                    <td>@monster.Intelligence</td>
+                                    <td>@monster.Wisdom</td>
+                                    <td>@monster.Charisma</td>
                                     <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => ShowEditForm(monster)">Edit</button></td>
                                     <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => DeleteMonster(monster)">Delete</button></td>
                                 </tr>
