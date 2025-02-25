@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\DnDEncounterGenerator.WebApp.props" />
-</Project>

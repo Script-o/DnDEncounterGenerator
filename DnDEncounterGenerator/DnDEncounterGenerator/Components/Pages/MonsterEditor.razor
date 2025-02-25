@@ -1,0 +1,98 @@
+﻿@page "/MonsterEditor"
+
+<PageTitle>Monsters</PageTitle>
+
+@using Microsoft.EntityFrameworkCore
+@using DnDEncounterGenerator.Data
+
+@rendermode InteractiveServer
+
+@inject IDbContextFactory<MonsterContext> MonsterContextFactory;
+
+@if (@ShowCreate)
+{
+
+    <h3>Add a New Monster</h3>
+    <div class="row">
+        <label for="Name" class="col-4 col-form-label">Monster Name</label>
+        <div class="col-8">
+            <input id="Name" name="Name" type="text" class="form-control" @bind="@NewMonster.Name">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Health" class="col-4 col-form-label">Health</label>
+        <div class="col-8">
+            <input id="Health" name="Health" type="text" class="form-control" @bind="@NewMonster.Health">
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-primary" @onclick="CreateNewMonster">Submit</button>
+        </div>
+    </div>
+
+}
+else
+{
+    <div class="form-group row">
+        <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-primary" @onclick="ShowCreateForm">Add a New Monster</button>
+        </div>
+    </div>
+
+    @if (@OurMonsters is not null && @OurMonsters.Count > 0)
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered table-light border-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Monster Name</th>
+                        <th scope="col">Health</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var monster in @OurMonsters)
+                    {
+                        @if (!@EditRecord)
+                        {
+                            <tr>
+                                <th scope="row">@monster.MonsterId</th>
+                                <td>@monster.Name</td>
+                                <td>@monster.Health</td>
+                                <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => ShowEditForm(monster)">Edit</button></td>
+                                <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => DeleteMonster(monster)">Delete</button></td>
+                            </tr>
+                        }
+                        else
+                        {
+                            if (@MonsterToUpdate is not null && @MonsterToUpdate.MonsterId == @monster.MonsterId)
+                            {
+                                <tr>
+                                    <th scope="row">@monster.MonsterId</th>
+                                    <td><input id="Name" name="Name" type="text" class="form-control" @bind="@MonsterToUpdate.Name" /></td>
+                                    <td><input id="Health" name="Health" type="text" class="form-control" @bind="@MonsterToUpdate.Health" /></td>
+                                    <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="@UpdateMonster">Save</button></td>
+                                    <td></td>
+                                </tr>
+                            }
+                            else
+                            {
+                                <tr>
+                                    <th scope="row">@monster.MonsterId</th>
+                                    <td>@monster.Name</td>
+                                    <td>@monster.Health</td>
+                                    <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => ShowEditForm(monster)">Edit</button></td>
+                                    <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => DeleteMonster(monster)">Delete</button></td>
+                                </tr>
+                            }
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}
