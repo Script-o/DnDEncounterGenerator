@@ -25,6 +25,9 @@ namespace DnDEncounterGenerator.Migrations
                     b.Property<int>("ArmorClass")
                         .HasColumnType("INTEGER");
 
+                    b.Property<double>("ChallengeRating")
+                        .HasColumnType("REAL");
+
                     b.Property<int>("Charisma")
                         .HasColumnType("INTEGER");
 
@@ -62,6 +65,7 @@ namespace DnDEncounterGenerator.Migrations
                         {
                             MonsterId = 1,
                             ArmorClass = 10,
+                            ChallengeRating = 0.25,
                             Charisma = 10,
                             Constitution = 10,
                             Dexterity = 10,
@@ -76,6 +80,7 @@ namespace DnDEncounterGenerator.Migrations
                         {
                             MonsterId = 2,
                             ArmorClass = 10,
+                            ChallengeRating = 1.0,
                             Charisma = 10,
                             Constitution = 10,
                             Dexterity = 10,
@@ -90,6 +95,7 @@ namespace DnDEncounterGenerator.Migrations
                         {
                             MonsterId = 3,
                             ArmorClass = 10,
+                            ChallengeRating = 2.0,
                             Charisma = 10,
                             Constitution = 10,
                             Dexterity = 10,

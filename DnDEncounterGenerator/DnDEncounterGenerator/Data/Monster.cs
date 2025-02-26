@@ -13,5 +13,6 @@
         public int Intelligence { get; set; }
         public int Wisdom { get; set; }
         public int Charisma { get; set; }
+        public double ChallengeRating { get; set; }
     }
 }

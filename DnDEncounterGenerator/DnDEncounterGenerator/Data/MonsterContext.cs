@@ -37,7 +37,8 @@ namespace DnDEncounterGenerator.Data
                         Constitution = 10,
                         Intelligence = 10,
                         Wisdom = 10,
-                        Charisma = 10
+                        Charisma = 10,
+                        ChallengeRating = .25
                     },
                     new Monster
                     {
@@ -51,7 +52,8 @@ namespace DnDEncounterGenerator.Data
                         Constitution = 10,
                         Intelligence = 10,
                         Wisdom = 10,
-                        Charisma = 10
+                        Charisma = 10,
+                        ChallengeRating = 1
                     },
                     new Monster
                     {
@@ -65,7 +67,8 @@ namespace DnDEncounterGenerator.Data
                         Constitution = 10,
                         Intelligence = 10,
                         Wisdom = 10,
-                        Charisma = 10
+                        Charisma = 10,
+                        ChallengeRating = 2
                     }
                 );
         }

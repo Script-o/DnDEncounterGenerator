@@ -1,5 +1,8 @@
 ﻿using DnDEncounterGenerator.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 
 namespace DnDEncounterGenerator.Components.Pages
 {
@@ -11,6 +14,9 @@ namespace DnDEncounterGenerator.Components.Pages
         {
             ShowCreate = false;
             await ShowMonsters();
+
+            // --- For testing a dynamic way to fill the tables ---
+            //await GetAllAttributesFromObject();
         }
 
         private MonsterContext? _context;
@@ -47,6 +53,7 @@ namespace DnDEncounterGenerator.Components.Pages
                 OurMonsters = await _context.Monsters.ToListAsync();
             }
 
+            // --- 90% sure this is not needed and causes issues ---
             //if (_context is not null) await _context.DisposeAsync();
         }
 
@@ -86,6 +93,42 @@ namespace DnDEncounterGenerator.Components.Pages
             }
 
             await ShowMonsters();
+        }
+
+
+
+
+
+        // --- Below is an experiment to try and loop all of the attributes of an object ---
+        public Monster? MonsterToCheck { get; set; }
+
+        public List<string> ListOfAttributes { get; set; }
+        public List<PropertyInfo> ListOfAttributes2 { get; set; }
+
+        public PropertyInfo instance {get; set;}
+
+        public async Task GetAllAttributesFromObject()
+        {
+            _context ??= await MonsterContextFactory.CreateDbContextAsync();
+            MonsterToCheck = _context.Monsters.FirstOrDefault(x => x.MonsterId == 1);
+
+
+
+            var monsterJson = JsonSerializer.Serialize(MonsterToCheck);
+
+
+
+
+            var tempList = new List<string>();
+            var attributeList = new List<PropertyInfo>();
+
+            foreach (PropertyInfo propertyInfo in MonsterToCheck.GetType().GetProperties())
+            {
+                tempList.Add(propertyInfo.Name);
+                attributeList.Add(propertyInfo);
+            }
+            ListOfAttributes = tempList;
+            ListOfAttributes2 = attributeList;
         }
     }
 }

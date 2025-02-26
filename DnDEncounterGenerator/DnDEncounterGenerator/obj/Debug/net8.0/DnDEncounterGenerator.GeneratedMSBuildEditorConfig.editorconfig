@@ -32,6 +32,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PROJECTS/DnDEncounterGenerator/DnDEncounterGenerator/DnDEncounterGenerator/Components/Pages/CombatStatistics.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21iYXRTdGF0aXN0aWNzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PROJECTS/DnDEncounterGenerator/DnDEncounterGenerator/DnDEncounterGenerator/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

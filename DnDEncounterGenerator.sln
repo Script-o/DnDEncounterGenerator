@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDEncounterGenerator", "DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.csproj", "{D9233DB4-3824-47AC-9C84-876067E0800C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDEncounterGenerator.Client", "DnDEncounterGenerator\DnDEncounterGenerator.Client\DnDEncounterGenerator.Client.csproj", "{2ABADF95-D9DE-4DB7-8801-553CFB606143}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDEncounterGenerator.Console", "DnDEncounterGenerator.Console\DnDEncounterGenerator.Console.csproj", "{4622FE4F-BC4C-4F1B-B863-6D0A08B49B3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2ABADF95-D9DE-4DB7-8801-553CFB606143}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ABADF95-D9DE-4DB7-8801-553CFB606143}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ABADF95-D9DE-4DB7-8801-553CFB606143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4622FE4F-BC4C-4F1B-B863-6D0A08B49B3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4622FE4F-BC4C-4F1B-B863-6D0A08B49B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4622FE4F-BC4C-4F1B-B863-6D0A08B49B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4622FE4F-BC4C-4F1B-B863-6D0A08B49B3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
