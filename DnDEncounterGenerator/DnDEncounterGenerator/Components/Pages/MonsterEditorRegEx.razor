@@ -1,0 +1,25 @@
+﻿@page "/MonsterEditorRegEx"
+
+<PageTitle>Monsters Sheet Importer</PageTitle>
+
+@using Microsoft.EntityFrameworkCore
+@using DnDEncounterGenerator.Data
+
+@rendermode InteractiveServer
+
+@inject IDbContextFactory<MonsterContext> MonsterContextFactory;
+
+<h3>Add a New Monster</h3>
+<div class="row">
+    <label for="Name" class="col-4 col-form-label">Monster Name</label>
+    <div class="col-8">
+        <input id="Name" name="Name" type="text" class="form-control" @bind="@textToParse">
+    </div>
+    <div class="form-group row">
+        <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-primary" @onclick="ParsePageForMonster">Submit</button>
+        </div>
+    </div>
+</div>
+
+<p>@NewMonsterString</p>
