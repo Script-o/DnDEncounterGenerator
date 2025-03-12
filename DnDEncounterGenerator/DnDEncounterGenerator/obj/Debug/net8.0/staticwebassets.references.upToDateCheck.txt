@@ -87,3 +87,4 @@ D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Cl
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\staticwebassets.build.json
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\staticwebassets.build.json
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\staticwebassets.build.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\staticwebassets.build.json
