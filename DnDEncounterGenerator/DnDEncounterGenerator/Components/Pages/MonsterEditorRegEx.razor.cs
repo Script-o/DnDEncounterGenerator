@@ -1,4 +1,4 @@
-﻿using DnDEncounterGenerator.Data;
+﻿using DnDEncounterGenerator.Shared;
 using System.Text.RegularExpressions;
 
 namespace DnDEncounterGenerator.Components.Pages
@@ -10,7 +10,7 @@ namespace DnDEncounterGenerator.Components.Pages
             
         //}
 
-        private MonsterContext? _context;
+        //private MonsterContext? _context;
 
         public Monster? NewMonster { get; set; }
 
@@ -275,7 +275,7 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public async Task CreateNewMonster()
         {
-            _context ??= await MonsterContextFactory.CreateDbContextAsync();
+            //_context ??= await MonsterContextFactory.CreateDbContextAsync();
 
             if (NewMonsterString is not null)
             {

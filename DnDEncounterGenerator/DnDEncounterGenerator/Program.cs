@@ -1,12 +1,11 @@
 using DnDEncounterGenerator.Client.Pages;
 using DnDEncounterGenerator.Components;
 
-using DnDEncounterGenerator.Data;
+using DnDEncounterGenerator.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("MonsterDB");
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -14,8 +13,8 @@ builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
 
 builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddDbContextFactory<MonsterContext>(options => options.UseSqlite(connectionString));
+
+builder.Services.AddHttpClient<IMonsterDataService, MonsterDataService>(client => client.BaseAddress = new Uri("https://localhost:44340"));
 
 var app = builder.Build();
 

@@ -1,4 +1,6 @@
-﻿using DnDEncounterGenerator.Data;
+﻿using DnDEncounterGenerator.Services;
+using DnDEncounterGenerator.Shared;
+using Microsoft.AspNetCore.Components;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using System.Text.Json;
@@ -8,6 +10,9 @@ namespace DnDEncounterGenerator.Components.Pages
 {
     public partial class MonsterEditor
     {
+        [Inject]
+        public IMonsterDataService MonsterDataService { get; set; }
+
         public bool ShowCreate { get; set; }
 
         protected override async Task OnInitializedAsync()
@@ -19,8 +24,6 @@ namespace DnDEncounterGenerator.Components.Pages
             //await GetAllAttributesFromObject();
         }
 
-        private MonsterContext? _context;
-
         public Monster? NewMonster { get; set; }
 
         public void ShowCreateForm()
@@ -31,30 +34,22 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public async Task CreateNewMonster()
         {
-            _context ??= await MonsterContextFactory.CreateDbContextAsync();
+            //_context ??= await MonsterContextFactory.CreateDbContextAsync();
 
-            if (NewMonster is not null)
-            {
-                _context?.Monsters.Add(NewMonster);
-                _context?.SaveChangesAsync();
-            }
-            ShowCreate = false;
-            await ShowMonsters();
+            //if (NewMonster is not null)
+            //{
+            //    _context?.Monsters.Add(NewMonster);
+            //    _context?.SaveChangesAsync();
+            //}
+            //ShowCreate = false;
+            //await ShowMonsters();
         }
 
         public List<Monster>? OurMonsters { get; set; }
 
         public async Task ShowMonsters()
         {
-            _context ??= await MonsterContextFactory.CreateDbContextAsync();
-
-            if (_context is not null)
-            {
-                OurMonsters = await _context.Monsters.ToListAsync();
-            }
-
-            // --- 90% sure this is not needed and causes issues ---
-            //if (_context is not null) await _context.DisposeAsync();
+            OurMonsters = (List<Monster>)await MonsterDataService.GetAllMonsters();
         }
 
         public bool EditRecord { get; set; }
@@ -64,35 +59,35 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public async Task ShowEditForm(Monster ourMonster)
         {
-            _context ??= await MonsterContextFactory.CreateDbContextAsync();
-            MonsterToUpdate = _context.Monsters.FirstOrDefault(x => x.MonsterId == ourMonster.MonsterId);
-            EditingId = ourMonster.MonsterId;
-            EditRecord = true;
+            //_context ??= await MonsterContextFactory.CreateDbContextAsync();
+            //MonsterToUpdate = _context.Monsters.FirstOrDefault(x => x.MonsterId == ourMonster.MonsterId);
+            //EditingId = ourMonster.MonsterId;
+            //EditRecord = true;
         }
 
         public async Task UpdateMonster()
         {
-            EditRecord = false;
-            _context ??= await MonsterContextFactory.CreateDbContextAsync();
+            //EditRecord = false;
+            //_context ??= await MonsterContextFactory.CreateDbContextAsync();
 
-            if (_context is not null)
-            {
-                if (MonsterToUpdate is not null) _context.Monsters.Update(MonsterToUpdate);
-                await _context.SaveChangesAsync();
-            }
+            //if (_context is not null)
+            //{
+            //    if (MonsterToUpdate is not null) _context.Monsters.Update(MonsterToUpdate);
+            //    await _context.SaveChangesAsync();
+            //}
         }
 
         public async Task DeleteMonster(Monster ourMonster)
         {
-            _context ??= await MonsterContextFactory.CreateDbContextAsync();
+            //_context ??= await MonsterContextFactory.CreateDbContextAsync();
 
-            if (_context is not null)
-            {
-                if (ourMonster is not null) _context.Monsters.Remove(ourMonster);
-                await _context.SaveChangesAsync();
-            }
+            //if (_context is not null)
+            //{
+            //    if (ourMonster is not null) _context.Monsters.Remove(ourMonster);
+            //    await _context.SaveChangesAsync();
+            //}
 
-            await ShowMonsters();
+            //await ShowMonsters();
         }
 
 
@@ -109,26 +104,26 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public async Task GetAllAttributesFromObject()
         {
-            _context ??= await MonsterContextFactory.CreateDbContextAsync();
-            MonsterToCheck = _context.Monsters.FirstOrDefault(x => x.MonsterId == 1);
+            //_context ??= await MonsterContextFactory.CreateDbContextAsync();
+            //MonsterToCheck = _context.Monsters.FirstOrDefault(x => x.MonsterId == 1);
 
 
 
-            var monsterJson = JsonSerializer.Serialize(MonsterToCheck);
+            //var monsterJson = JsonSerializer.Serialize(MonsterToCheck);
 
 
 
 
-            var tempList = new List<string>();
-            var attributeList = new List<PropertyInfo>();
+            //var tempList = new List<string>();
+            //var attributeList = new List<PropertyInfo>();
 
-            foreach (PropertyInfo propertyInfo in MonsterToCheck.GetType().GetProperties())
-            {
-                tempList.Add(propertyInfo.Name);
-                attributeList.Add(propertyInfo);
-            }
-            ListOfAttributes = tempList;
-            ListOfAttributes2 = attributeList;
+            //foreach (PropertyInfo propertyInfo in MonsterToCheck.GetType().GetProperties())
+            //{
+            //    tempList.Add(propertyInfo.Name);
+            //    attributeList.Add(propertyInfo);
+            //}
+            //ListOfAttributes = tempList;
+            //ListOfAttributes2 = attributeList;
         }
     }
 }
