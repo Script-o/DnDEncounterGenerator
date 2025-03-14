@@ -187,3 +187,8 @@ D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator\ob
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator\obj\Debug\net8.0\DnDEncounterGenerator.genruntimeconfig.cache
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator\obj\Debug\net8.0\ref\DnDEncounterGenerator.dll
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator\bin\Debug\net8.0\DnDEncounterGenerator.Shared.deps.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator\bin\Debug\net8.0\DnDEncounterGenerator.Shared.runtimeconfig.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator\bin\Debug\net8.0\DnDEncounterGenerator.Shared.exe
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator\bin\Debug\net8.0\DnDEncounterGenerator.Shared.dll
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator\bin\Debug\net8.0\DnDEncounterGenerator.Shared.pdb

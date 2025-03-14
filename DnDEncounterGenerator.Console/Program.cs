@@ -1,4 +1,4 @@
-﻿using DnDEncounterGenerator.Data;
+﻿using DnDEncounterGenerator.Shared;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

@@ -1,0 +1,15 @@
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\bin\Debug\net8.0\DnDEncounterGenerator.Shared.exe
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\bin\Debug\net8.0\DnDEncounterGenerator.Shared.deps.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\bin\Debug\net8.0\DnDEncounterGenerator.Shared.runtimeconfig.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\bin\Debug\net8.0\DnDEncounterGenerator.Shared.dll
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\bin\Debug\net8.0\DnDEncounterGenerator.Shared.pdb
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\obj\Debug\net8.0\DnDEncounterGenerator.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\obj\Debug\net8.0\DnDEncounterGenerator.Shared.AssemblyInfoInputs.cache
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\obj\Debug\net8.0\DnDEncounterGenerator.Shared.AssemblyInfo.cs
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\obj\Debug\net8.0\DnDEncounterGenerator.Shared.csproj.CoreCompileInputs.cache
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\obj\Debug\net8.0\DnDEncounterGenerator.Shared.sourcelink.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\obj\Debug\net8.0\DnDEncounterGenerator.Shared.dll
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\obj\Debug\net8.0\refint\DnDEncounterGenerator.Shared.dll
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\obj\Debug\net8.0\DnDEncounterGenerator.Shared.pdb
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\obj\Debug\net8.0\DnDEncounterGenerator.Shared.genruntimeconfig.cache
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Shared\obj\Debug\net8.0\ref\DnDEncounterGenerator.Shared.dll

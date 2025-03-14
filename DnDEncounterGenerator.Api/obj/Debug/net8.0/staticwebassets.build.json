@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "mPGCAw9Drj0Nx2l6tH58s2R334qXrePyETVBS02LQow=",
+  "Source": "DnDEncounterGenerator.Api",
+  "BasePath": "_content/DnDEncounterGenerator.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

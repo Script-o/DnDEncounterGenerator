@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDEncounterGenerator.Clien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDEncounterGenerator.Console", "DnDEncounterGenerator.Console\DnDEncounterGenerator.Console.csproj", "{4622FE4F-BC4C-4F1B-B863-6D0A08B49B3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDEncounterGenerator.Shared", "DnDEncounterGenerator.Shared\DnDEncounterGenerator.Shared.csproj", "{B787D2F6-CD4A-444C-83AE-5AC795461697}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDEncounterGenerator.Api", "DnDEncounterGenerator.Api\DnDEncounterGenerator.Api.csproj", "{86CF8785-9A91-43B9-AD79-7DF724977B64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{4622FE4F-BC4C-4F1B-B863-6D0A08B49B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4622FE4F-BC4C-4F1B-B863-6D0A08B49B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4622FE4F-BC4C-4F1B-B863-6D0A08B49B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B787D2F6-CD4A-444C-83AE-5AC795461697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B787D2F6-CD4A-444C-83AE-5AC795461697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B787D2F6-CD4A-444C-83AE-5AC795461697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B787D2F6-CD4A-444C-83AE-5AC795461697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86CF8785-9A91-43B9-AD79-7DF724977B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CF8785-9A91-43B9-AD79-7DF724977B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CF8785-9A91-43B9-AD79-7DF724977B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CF8785-9A91-43B9-AD79-7DF724977B64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

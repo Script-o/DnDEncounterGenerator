@@ -9,6 +9,7 @@
       "DnDEncounterGenerator/1.0.0": {
         "dependencies": {
           "DnDEncounterGenerator.Client": "1.0.0",
+          "DnDEncounterGenerator.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "8.0.13",
           "Microsoft.EntityFrameworkCore": "9.0.2",
           "Microsoft.EntityFrameworkCore.Design": "9.0.2",
@@ -989,6 +990,14 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "DnDEncounterGenerator.Shared/1.0.0": {
+        "runtime": {
+          "DnDEncounterGenerator.Shared.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1468,6 +1477,11 @@
       "hashPath": "system.threading.channels.7.0.0.nupkg.sha512"
     },
     "DnDEncounterGenerator.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DnDEncounterGenerator.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
