@@ -34,15 +34,12 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public async Task CreateNewMonster()
         {
-            //_context ??= await MonsterContextFactory.CreateDbContextAsync();
-
-            //if (NewMonster is not null)
-            //{
-            //    _context?.Monsters.Add(NewMonster);
-            //    _context?.SaveChangesAsync();
-            //}
-            //ShowCreate = false;
-            //await ShowMonsters();
+            if (NewMonster is not null)
+            {
+                await MonsterDataService.AddMonster(NewMonster);
+            }
+            ShowCreate = false;
+            await ShowMonsters();
         }
 
         public List<Monster>? OurMonsters { get; set; }
@@ -59,35 +56,29 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public async Task ShowEditForm(Monster ourMonster)
         {
-            //_context ??= await MonsterContextFactory.CreateDbContextAsync();
-            //MonsterToUpdate = _context.Monsters.FirstOrDefault(x => x.MonsterId == ourMonster.MonsterId);
-            //EditingId = ourMonster.MonsterId;
-            //EditRecord = true;
+            MonsterToUpdate = await MonsterDataService.GetMonsterById(ourMonster);
+            EditingId = ourMonster.MonsterId;
+            EditRecord = true;
         }
 
         public async Task UpdateMonster()
         {
-            //EditRecord = false;
-            //_context ??= await MonsterContextFactory.CreateDbContextAsync();
+            EditRecord = false;
+            Monster monster = await MonsterDataService.GetMonsterById(MonsterToUpdate);
 
-            //if (_context is not null)
-            //{
-            //    if (MonsterToUpdate is not null) _context.Monsters.Update(MonsterToUpdate);
-            //    await _context.SaveChangesAsync();
-            //}
+            if (monster is not null)
+            {
+                await MonsterDataService.UpdateMonster(MonsterToUpdate);
+            }
+
+            await ShowMonsters();
         }
 
         public async Task DeleteMonster(Monster ourMonster)
         {
-            //_context ??= await MonsterContextFactory.CreateDbContextAsync();
+            await MonsterDataService.DeleteMonster(ourMonster);
 
-            //if (_context is not null)
-            //{
-            //    if (ourMonster is not null) _context.Monsters.Remove(ourMonster);
-            //    await _context.SaveChangesAsync();
-            //}
-
-            //await ShowMonsters();
+            await ShowMonsters();
         }
 
 

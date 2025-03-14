@@ -1,26 +1,37 @@
-﻿using DnDEncounterGenerator.Shared;
+﻿using DnDEncounterGenerator.Services;
+using DnDEncounterGenerator.Shared;
+using Microsoft.AspNetCore.Components;
 using System.Text.RegularExpressions;
 
 namespace DnDEncounterGenerator.Components.Pages
 {
     public partial class MonsterEditorRegEx
     {
-        //protected override async Task OnInitializedAsync()
-        //{
-            
-        //}
+        [Inject]
+        public IMonsterDataService MonsterDataService { get; set; }
 
-        //private MonsterContext? _context;
+        public bool ShowCreate { get; set; }
+
+        protected override async Task OnInitializedAsync()
+        {
+            ShowCreate = false;
+        }
 
         public Monster? NewMonster { get; set; }
 
-        public string? NewMonsterString { get; set; }
+        public string? MonsterAddedText { get; set; }
 
         public string? textToParse { get; set; }
 
-        public void ParsePageForMonster()
+        public void ShowCreateForm()
         {
             NewMonster = new Monster();
+            ShowCreate = true;
+        }
+
+        public void ParsePageForMonster()
+        {
+            ShowCreateForm();
 
             // Hit Points
             string pattern = @"Hit Points\s*\d*";
@@ -40,11 +51,10 @@ namespace DnDEncounterGenerator.Components.Pages
                 int finalInt = 0;
                 Int32.TryParse(secondMatch.ToString(), out finalInt);
                 NewMonster.HitPoints = finalInt;
-                NewMonsterString = "HP: " + NewMonster.HitPoints.ToString();
             }
             else
             {
-                NewMonsterString = "No HP Found";
+                NewMonster.HitPoints = 0;
             }
 
             // Armor Class
@@ -64,12 +74,11 @@ namespace DnDEncounterGenerator.Components.Pages
             {
                 int finalInt = 0;
                 Int32.TryParse(secondMatch.ToString(), out finalInt);
-                NewMonster.HitPoints = finalInt;
-                NewMonsterString += ", AC: " + NewMonster.HitPoints.ToString();
+                NewMonster.ArmorClass = finalInt;
             }
             else
             {
-                NewMonsterString += ", No AC Found";
+                NewMonster.ArmorClass = 0;
             }
 
             // Speed
@@ -90,11 +99,10 @@ namespace DnDEncounterGenerator.Components.Pages
                 int finalInt = 0;
                 Int32.TryParse(secondMatch.ToString(), out finalInt);
                 NewMonster.Speed = finalInt;
-                NewMonsterString += ", Speed: " + NewMonster.Speed.ToString() + " ft";
             }
             else
             {
-                NewMonsterString += ", No Speed Found";
+                NewMonster.Speed = 0;
             }
 
             // Stregth
@@ -115,11 +123,10 @@ namespace DnDEncounterGenerator.Components.Pages
                 int finalInt = 0;
                 Int32.TryParse(secondMatch.ToString(), out finalInt);
                 NewMonster.Strength = finalInt;
-                NewMonsterString += ", STR: " + NewMonster.Strength.ToString();
             }
             else
             {
-                NewMonsterString += ", No STR Found";
+                NewMonster.Strength = 0;
             }
 
             // Dexterity
@@ -140,11 +147,10 @@ namespace DnDEncounterGenerator.Components.Pages
                 int finalInt = 0;
                 Int32.TryParse(secondMatch.ToString(), out finalInt);
                 NewMonster.Dexterity = finalInt;
-                NewMonsterString += ", DEX: " + NewMonster.Dexterity.ToString();
             }
             else
             {
-                NewMonsterString += ", No DEX Found";
+                NewMonster.Dexterity = 0;
             }
 
             // Constitution
@@ -165,11 +171,10 @@ namespace DnDEncounterGenerator.Components.Pages
                 int finalInt = 0;
                 Int32.TryParse(secondMatch.ToString(), out finalInt);
                 NewMonster.Constitution = finalInt;
-                NewMonsterString += ", CON: " + NewMonster.Constitution.ToString();
             }
             else
             {
-                NewMonsterString += ", No CON Found";
+                NewMonster.Constitution = 0;
             }
 
             // Intelligence
@@ -190,11 +195,10 @@ namespace DnDEncounterGenerator.Components.Pages
                 int finalInt = 0;
                 Int32.TryParse(secondMatch.ToString(), out finalInt);
                 NewMonster.Intelligence = finalInt;
-                NewMonsterString += ", INT: " + NewMonster.Intelligence.ToString();
             }
             else
             {
-                NewMonsterString += ", No INT Found";
+                NewMonster.Intelligence = 0;
             }
 
             // Wisdom
@@ -215,11 +219,10 @@ namespace DnDEncounterGenerator.Components.Pages
                 int finalInt = 0;
                 Int32.TryParse(secondMatch.ToString(), out finalInt);
                 NewMonster.Wisdom = finalInt;
-                NewMonsterString += ", WIS: " + NewMonster.Wisdom.ToString();
             }
             else
             {
-                NewMonsterString += ", No WIS Found";
+                NewMonster.Wisdom = 0;
             }
 
             // Charisma
@@ -240,14 +243,13 @@ namespace DnDEncounterGenerator.Components.Pages
                 int finalInt = 0;
                 Int32.TryParse(secondMatch.ToString(), out finalInt);
                 NewMonster.Charisma = finalInt;
-                NewMonsterString += ", CHA: " + NewMonster.Charisma.ToString();
             }
             else
             {
-                NewMonsterString += ", No CHA Found";
+                NewMonster.Charisma = 0;
             }
 
-            // Charisma
+            // Challenge Rating
             pattern = @"Challenge\s*\d*";
 
             rg = new Regex(pattern);
@@ -265,25 +267,24 @@ namespace DnDEncounterGenerator.Components.Pages
                 int finalInt = 0;
                 Int32.TryParse(secondMatch.ToString(), out finalInt);
                 NewMonster.ChallengeRating = finalInt;
-                NewMonsterString += ", Challenge: " + NewMonster.ChallengeRating.ToString();
             }
             else
             {
-                NewMonsterString += ", No Challenge Found";
+                NewMonster.ChallengeRating = 0;
             }
         }
 
         public async Task CreateNewMonster()
         {
-            //_context ??= await MonsterContextFactory.CreateDbContextAsync();
-
-            if (NewMonsterString is not null)
+            if (NewMonster is not null)
             {
-                //_context?.Monsters.Add(NewMonster);
-                //_context?.SaveChangesAsync();
+                await MonsterDataService.AddMonster(NewMonster);
             }
-            //ShowCreate = false;
-            //await ShowMonsters();
+
+            textToParse = "";
+            MonsterAddedText = $"{NewMonster.Name} has been added to the database.";
+
+            ShowCreate = false;
         }
     }
 }

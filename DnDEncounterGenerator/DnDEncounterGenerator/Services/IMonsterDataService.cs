@@ -5,5 +5,13 @@ namespace DnDEncounterGenerator.Services
     public interface IMonsterDataService
     {
         Task<IEnumerable<Monster>> GetAllMonsters();
+
+        Task<Monster> GetMonsterById(Monster monster);
+
+        Task<Monster> AddMonster(Monster monster);
+
+        Task UpdateMonster(Monster monster);
+
+        Task DeleteMonster(Monster monster);
     }
 }

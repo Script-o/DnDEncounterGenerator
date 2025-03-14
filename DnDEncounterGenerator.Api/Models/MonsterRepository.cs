@@ -19,22 +19,50 @@ namespace DnDEncounterGenerator.Api.Models
 
         public Monster GetMonsterById(int monsterId)
         {
-            return null;
+            return _monsterDataContext.Monsters.FirstOrDefault(c => c.MonsterId == monsterId);
         }
 
         public Monster AddMonster(Monster monster)
         {
+            var addedEntity = _monsterDataContext.Monsters.Add(monster);
+            _monsterDataContext.SaveChanges();
+            return addedEntity.Entity;
+        }
+
+        public Monster UpdateMonster(Monster monster)
+        {
+            var foundMonster = _monsterDataContext.Monsters.FirstOrDefault(e => e.MonsterId == monster.MonsterId);
+
+            if (foundMonster != null)
+            {
+                foundMonster.MonsterId = monster.MonsterId;
+                foundMonster.Name = monster.Name;
+                foundMonster.ArmorClass = monster.ArmorClass;
+                foundMonster.HitPoints = monster.HitPoints;
+                foundMonster.Speed = monster.Speed;
+                foundMonster.Strength = monster.Strength;
+                foundMonster.Dexterity = monster.Dexterity;
+                foundMonster.Constitution = monster.Constitution;
+                foundMonster.Intelligence = monster.Intelligence;
+                foundMonster.Wisdom = monster.Wisdom;
+                foundMonster.Charisma = monster.Charisma;
+                foundMonster.ChallengeRating = monster.ChallengeRating;
+
+                _monsterDataContext.SaveChanges();
+
+                return foundMonster;
+            }
+
             return null;
         }
 
         public void DeleteMonster(int monsterId)
         {
-            
-        }
+            var foundEmployee = GetMonsterById(monsterId);
+            if (foundEmployee == null) return;
 
-        public Monster UpdateMonster(Monster monster)
-        {
-            return null;
+            _monsterDataContext.Monsters.Remove(foundEmployee);
+            _monsterDataContext.SaveChanges();
         }
     }
 }

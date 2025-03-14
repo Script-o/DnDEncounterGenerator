@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "D:\\PROJECTS\\DnDEncounterGenerator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D9233DB4-3824-47AC-9C84-876067E0800C}|DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.csproj|d:\\projects\\dndencountergenerator\\dndencountergenerator\\dndencountergenerator\\components\\pages\\monstereditor.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9233DB4-3824-47AC-9C84-876067E0800C}|DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.csproj|solutionrelative:dndencountergenerator\\dndencountergenerator\\components\\pages\\monstereditor.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9233DB4-3824-47AC-9C84-876067E0800C}|DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.csproj|d:\\projects\\dndencountergenerator\\dndencountergenerator\\dndencountergenerator\\components\\pages\\monstereditorregex.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D9233DB4-3824-47AC-9C84-876067E0800C}|DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.csproj|solutionrelative:dndencountergenerator\\dndencountergenerator\\components\\pages\\monstereditorregex.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D9233DB4-3824-47AC-9C84-876067E0800C}|DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.csproj|d:\\projects\\dndencountergenerator\\dndencountergenerator\\dndencountergenerator\\components\\pages\\monstereditor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D9233DB4-3824-47AC-9C84-876067E0800C}|DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.csproj|solutionrelative:dndencountergenerator\\dndencountergenerator\\components\\pages\\monstereditor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D9233DB4-3824-47AC-9C84-876067E0800C}|DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.csproj|d:\\projects\\dndencountergenerator\\dndencountergenerator\\dndencountergenerator\\components\\pages\\monstereditorregex.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9233DB4-3824-47AC-9C84-876067E0800C}|DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.csproj|solutionrelative:dndencountergenerator\\dndencountergenerator\\components\\pages\\monstereditorregex.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9233DB4-3824-47AC-9C84-876067E0800C}|DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.csproj|d:\\projects\\dndencountergenerator\\dndencountergenerator\\dndencountergenerator\\components\\pages\\monstereditor.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9233DB4-3824-47AC-9C84-876067E0800C}|DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.csproj|solutionrelative:dndencountergenerator\\dndencountergenerator\\components\\pages\\monstereditor.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D9233DB4-3824-47AC-9C84-876067E0800C}|DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.csproj|d:\\projects\\dndencountergenerator\\dndencountergenerator\\dndencountergenerator\\services\\monsterdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9233DB4-3824-47AC-9C84-876067E0800C}|DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.csproj|solutionrelative:dndencountergenerator\\dndencountergenerator\\services\\monsterdataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86CF8785-9A91-43B9-AD79-7DF724977B64}|DnDEncounterGenerator.Api\\DnDEncounterGenerator.Api.csproj|d:\\projects\\dndencountergenerator\\dndencountergenerator.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86CF8785-9A91-43B9-AD79-7DF724977B64}|DnDEncounterGenerator.Api\\DnDEncounterGenerator.Api.csproj|solutionrelative:dndencountergenerator.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86CF8785-9A91-43B9-AD79-7DF724977B64}|DnDEncounterGenerator.Api\\DnDEncounterGenerator.Api.csproj|d:\\projects\\dndencountergenerator\\dndencountergenerator.api\\data\\monsterdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86CF8785-9A91-43B9-AD79-7DF724977B64}|DnDEncounterGenerator.Api\\DnDEncounterGenerator.Api.csproj|solutionrelative:dndencountergenerator.api\\data\\monsterdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86CF8785-9A91-43B9-AD79-7DF724977B64}|DnDEncounterGenerator.Api\\DnDEncounterGenerator.Api.csproj|d:\\projects\\dndencountergenerator\\dndencountergenerator.api\\controllers\\monstercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86CF8785-9A91-43B9-AD79-7DF724977B64}|DnDEncounterGenerator.Api\\DnDEncounterGenerator.Api.csproj|solutionrelative:dndencountergenerator.api\\controllers\\monstercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86CF8785-9A91-43B9-AD79-7DF724977B64}|DnDEncounterGenerator.Api\\DnDEncounterGenerator.Api.csproj|d:\\projects\\dndencountergenerator\\dndencountergenerator.api\\models\\monsterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86CF8785-9A91-43B9-AD79-7DF724977B64}|DnDEncounterGenerator.Api\\DnDEncounterGenerator.Api.csproj|solutionrelative:dndencountergenerator.api\\models\\monsterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86CF8785-9A91-43B9-AD79-7DF724977B64}|DnDEncounterGenerator.Api\\DnDEncounterGenerator.Api.csproj|d:\\projects\\dndencountergenerator\\dndencountergenerator.api\\controllers\\monstercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86CF8785-9A91-43B9-AD79-7DF724977B64}|DnDEncounterGenerator.Api\\DnDEncounterGenerator.Api.csproj|solutionrelative:dndencountergenerator.api\\controllers\\monstercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,84 +38,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.Api\\Program.cs",
-              "RelativeDocumentMoniker": "DnDEncounterGenerator.Api\\Program.cs",
-              "ToolTip": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.Api\\Program.cs",
-              "RelativeToolTip": "DnDEncounterGenerator.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T18:09:01.061Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MonsterDataContext.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.Api\\Data\\MonsterDataContext.cs",
-              "RelativeDocumentMoniker": "DnDEncounterGenerator.Api\\Data\\MonsterDataContext.cs",
-              "ToolTip": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.Api\\Data\\MonsterDataContext.cs",
-              "RelativeToolTip": "DnDEncounterGenerator.Api\\Data\\MonsterDataContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T17:34:00.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MonsterRepository.cs",
               "DocumentMoniker": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.Api\\Models\\MonsterRepository.cs",
               "RelativeDocumentMoniker": "DnDEncounterGenerator.Api\\Models\\MonsterRepository.cs",
               "ToolTip": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.Api\\Models\\MonsterRepository.cs",
               "RelativeToolTip": "DnDEncounterGenerator.Api\\Models\\MonsterRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwCcAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T17:44:27.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "MonsterController.cs",
               "DocumentMoniker": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.Api\\Controllers\\MonsterController.cs",
               "RelativeDocumentMoniker": "DnDEncounterGenerator.Api\\Controllers\\MonsterController.cs",
               "ToolTip": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator.Api\\Controllers\\MonsterController.cs",
               "RelativeToolTip": "DnDEncounterGenerator.Api\\Controllers\\MonsterController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAIwEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T17:33:21.813Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MonsterDataService.cs",
               "DocumentMoniker": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator\\Services\\MonsterDataService.cs",
               "RelativeDocumentMoniker": "DnDEncounterGenerator\\DnDEncounterGenerator\\Services\\MonsterDataService.cs",
               "ToolTip": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator\\Services\\MonsterDataService.cs",
               "RelativeToolTip": "DnDEncounterGenerator\\DnDEncounterGenerator\\Services\\MonsterDataService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T18:22:48.966Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MonsterEditor.razor.cs",
               "DocumentMoniker": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditor.razor.cs",
               "RelativeDocumentMoniker": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditor.razor.cs",
               "ToolTip": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditor.razor.cs",
               "RelativeToolTip": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditor.razor.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA9wCsAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T19:01:01.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MonsterEditorRegEx.razor.cs",
+              "DocumentMoniker": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditorRegEx.razor.cs",
+              "RelativeDocumentMoniker": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditorRegEx.razor.cs",
+              "ToolTip": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditorRegEx.razor.cs",
+              "RelativeToolTip": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditorRegEx.razor.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwDsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T17:34:00.861Z",
               "EditorCaption": ""
             },
             {
@@ -126,9 +113,22 @@
               "RelativeDocumentMoniker": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditor.razor",
               "ToolTip": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditor.razor",
               "RelativeToolTip": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditor.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-25T18:59:10.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MonsterEditorRegEx.razor",
+              "DocumentMoniker": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditorRegEx.razor",
+              "RelativeDocumentMoniker": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditorRegEx.razor",
+              "ToolTip": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditorRegEx.razor",
+              "RelativeToolTip": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditorRegEx.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T17:33:56.005Z",
               "EditorCaption": ""
             }
           ]

@@ -6,17 +6,97 @@
 
 @rendermode InteractiveServer
 
-<h3>Add a New Monster</h3>
-<div class="row">
-    <label for="Name" class="col-4 col-form-label">Monster Name</label>
-    <div class="col-8">
-        <input id="Name" name="Name" type="text" class="form-control" @bind="@textToParse">
+@if (@ShowCreate)
+{
+
+    <h3>Add a New Monster</h3>
+    <div class="row">
+        <label for="Name" class="col-4 col-form-label">Monster Name</label>
+        <div class="col-8">
+            <input id="Name" name="Name" type="text" class="form-control" @bind="@NewMonster.Name">
+        </div>
+    </div>
+    <div class="row">
+        <label for="ArmorClass" class="col-4 col-form-label">Armor Class</label>
+        <div class="col-8">
+            <input id="ArmorClass" name="ArmorClass" type="text" class="form-control" @bind="@NewMonster.ArmorClass">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Health" class="col-4 col-form-label">Health</label>
+        <div class="col-8">
+            <input id="Health" name="Health" type="text" class="form-control" @bind="@NewMonster.HitPoints">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Speed" class="col-4 col-form-label">Speed</label>
+        <div class="col-8">
+            <input id="Speed" name="Speed" type="text" class="form-control" @bind="@NewMonster.Speed">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Strength" class="col-4 col-form-label">Strength</label>
+        <div class="col-8">
+            <input id="Strength" name="Strength" type="text" class="form-control" @bind="@NewMonster.Strength">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Dexterity" class="col-4 col-form-label">Dexterity</label>
+        <div class="col-8">
+            <input id="Dexterity" name="Dexterity" type="text" class="form-control" @bind="@NewMonster.Dexterity">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Constitution" class="col-4 col-form-label">Constitution</label>
+        <div class="col-8">
+            <input id="Constitution" name="Constitution" type="text" class="form-control" @bind="@NewMonster.Constitution">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Intelligence" class="col-4 col-form-label">Intelligence</label>
+        <div class="col-8">
+            <input id="Intelligence" name="Intelligence" type="text" class="form-control" @bind="@NewMonster.Intelligence">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Wisdom" class="col-4 col-form-label">Wisdom</label>
+        <div class="col-8">
+            <input id="Wisdom" name="Wisdom" type="text" class="form-control" @bind="@NewMonster.Wisdom">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Charisma" class="col-4 col-form-label">Charisma</label>
+        <div class="col-8">
+            <input id="Charisma" name="Charisma" type="text" class="form-control" @bind="@NewMonster.Charisma">
+        </div>
+    </div>
+    <div class="row">
+        <label for="ChallengeRating" class="col-4 col-form-label">Challenge Rating</label>
+        <div class="col-8">
+            <input id="ChallengeRating" name="ChallengeRating" type="text" class="form-control" @bind="@NewMonster.ChallengeRating">
+        </div>
     </div>
     <div class="form-group row">
         <div class="offset-4 col-8">
-            <button name="submit" type="submit" class="btn btn-primary" @onclick="ParsePageForMonster">Submit</button>
+            <button name="submit" type="submit" class="btn btn-primary" @onclick="CreateNewMonster">Submit</button>
         </div>
     </div>
-</div>
 
-<p>@NewMonsterString</p>
+}
+else
+{
+    <h3>Add a New Monster</h3>
+    <div class="row">
+        <label for="Name" class="col-4 col-form-label">Insert Text</label>
+        <div class="col-8">
+            <input id="Name" name="Name" type="text" class="form-control" @bind="@textToParse">
+        </div>
+        <div class="form-group row">
+            <div class="offset-4 col-8">
+                <button name="submit" type="submit" class="btn btn-primary" @onclick="ParsePageForMonster">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <p>@MonsterAddedText</p>
+}
