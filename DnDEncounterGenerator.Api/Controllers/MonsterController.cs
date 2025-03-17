@@ -67,9 +67,9 @@ namespace DnDEncounterGenerator.Api.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var employeeToUpdate = _monsterRepository.GetMonsterById(monster.MonsterId);
+            var monsterToUpdate = _monsterRepository.GetMonsterById(monster.MonsterId);
 
-            if (employeeToUpdate == null)
+            if (monsterToUpdate == null)
                 return NotFound();
 
             _monsterRepository.UpdateMonster(monster);

@@ -28,10 +28,10 @@ namespace DnDEncounterGenerator.Services
 
         public async Task<Monster> AddMonster(Monster monster)
         {
-            var monstertJson =
+            var monsterJson =
                 new StringContent(JsonSerializer.Serialize(monster), Encoding.UTF8, "application/json");
 
-            var response = await _httpClient.PostAsync("api/monster", monstertJson);
+            var response = await _httpClient.PostAsync("api/monster", monsterJson);
 
             if (response.IsSuccessStatusCode)
             {
