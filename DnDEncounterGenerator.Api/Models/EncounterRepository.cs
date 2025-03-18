@@ -23,7 +23,7 @@ namespace DnDEncounterGenerator.Api.Models
 
         public Encounter GetEncounterById(int encounterId)
         {
-            return _monsterDataContext.Encounters.FirstOrDefault(c => c.EncounterId == encounterId);
+            return _monsterDataContext.Encounters.Include(e => e.Monsters).FirstOrDefault(c => c.EncounterId == encounterId);
         }
 
         public Encounter AddEncounter(Encounter encounter)
@@ -42,7 +42,7 @@ namespace DnDEncounterGenerator.Api.Models
                 foundEncounter.EncounterId = encounter.EncounterId;
                 foundEncounter.Name = encounter.Name;
                 foundEncounter.Description = encounter.Description;
-                foundEncounter.Monsters = encounter.Monsters;
+                //foundEncounter.Monsters = encounter.Monsters;
 
                 _monsterDataContext.SaveChanges();
 

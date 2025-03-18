@@ -38,11 +38,6 @@ namespace DnDEncounterGenerator.Components.Pages
             await ShowEncounters();
         }
 
-        public async Task AddMonsterToEncounter()
-        {
-            //Need to add
-        }
-
         public List<Encounter>? CurrentEncounters { get; set; }
 
         public async Task ShowEncounters()
@@ -83,11 +78,19 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public Monster? MonsterToUpdate { get; set; }
 
-        public async Task RemoveMonsterFromEncounter(Monster monster)
+        public async Task RemoveMonsterFromEncounter(int i)
         {
-            var monsterToRemove = await MonsterDataService.GetMonsterById(monster);
+            Encounter encounter = await EncounterDataService.GetEncounterById(EncounterToUpdate);
 
-            EncounterToUpdate.Monsters.Remove(monsterToRemove);
+            Monster monsterToRemove = await MonsterDataService.GetMonsterById(EncounterToUpdate.Monsters[i]);
+
+            if (encounter is not null && monsterToRemove is not null)
+            {
+                await EncounterDataService.RemoveMonsterFromEncounter(EncounterToUpdate, monsterToRemove);
+            }
+
+            ShowCreate = false;
+            await ShowEncounters();
         }
 
         public async Task DeleteEncounter(Encounter ourEncounter)

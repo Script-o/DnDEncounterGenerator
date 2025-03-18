@@ -57,6 +57,14 @@ namespace DnDEncounterGenerator.Services
             await _httpClient.PutAsync($"api/encounter/add/{monster.MonsterId}", encounterJson);
         }
 
+        public async Task RemoveMonsterFromEncounter(Encounter encounter, Monster monster)
+        {
+            var encounterJson =
+               new StringContent(JsonSerializer.Serialize(encounter), Encoding.UTF8, "application/json");
+
+            await _httpClient.PutAsync($"api/encounter/remove/{monster.MonsterId}", encounterJson);
+        }
+
         public async Task DeleteEncounter(Encounter encounter)
         {
             await _httpClient.DeleteAsync($"api/encounter/{encounter.EncounterId}");

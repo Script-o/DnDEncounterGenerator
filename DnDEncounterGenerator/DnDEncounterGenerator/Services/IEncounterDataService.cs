@@ -16,6 +16,8 @@ namespace DnDEncounterGenerator.Services
 
         Task AddMonsterToEncounter(Encounter encounter, Monster monster);
 
+        Task RemoveMonsterFromEncounter(Encounter encounter, Monster monster);
+
         Task DeleteEncounter(Encounter encounter);
     }
 }

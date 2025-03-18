@@ -90,12 +90,14 @@ else
                                         {
                                             @for (int i = 0; i < encounter.Monsters.Count; i++)
                                             {
-                                            <td> <button name="submit" type="submit" class="btn btn-danger" @onclick="() => RemoveMonsterFromEncounter(encounter.Monsters[i-1])">@encounter.Monsters[i].Name</button></td>
+                                                var monsterArrayNumber = i;
+                                            <td> <button name="submit" type="submit" class="btn btn-danger" @onclick="() => RemoveMonsterFromEncounter(monsterArrayNumber)">@encounter.Monsters[i].Name</button></td>
                                             }
+                                        <td> <button name="submit" type="submit" class="btn btn-primary">+</button></td>
                                         }
                                         else
                                         {
-                                            <td></td>
+                                        <td> <button name="submit" type="submit" class="btn btn-primary">+</button></td>
                                         }
                                     </td>
                                     <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="@UpdateEncounter">Save</button></td>

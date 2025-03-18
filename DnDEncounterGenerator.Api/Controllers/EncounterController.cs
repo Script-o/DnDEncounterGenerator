@@ -101,7 +101,7 @@ namespace DnDEncounterGenerator.Api.Controllers
             return NoContent(); //success
         }
 
-        // PUT: api/Monster/Add/1
+        // PUT: api/Monster/Remove/1
         [HttpPut("remove/{id}")]
         public IActionResult RemoveMonsterFromEncounter([FromBody] Encounter encounter, int id)
         {
