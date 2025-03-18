@@ -1,10 +1,11 @@
 ﻿using DnDEncounterGenerator.Shared;
 using System.Text.Json;
 using System.Text;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace DnDEncounterGenerator.Services
 {
-    public class EncounterDataService
+    public class EncounterDataService : IEncounterDataService
     {
         private readonly HttpClient _httpClient;
 
@@ -46,6 +47,14 @@ namespace DnDEncounterGenerator.Services
                 new StringContent(JsonSerializer.Serialize(encounter), Encoding.UTF8, "application/json");
 
             await _httpClient.PutAsync("api/encounter", encounterJson);
+        }
+
+        public async Task AddMonsterToEncounter(Encounter encounter, Monster monster)
+        {
+            var encounterJson =
+               new StringContent(JsonSerializer.Serialize(encounter), Encoding.UTF8, "application/json");
+
+            await _httpClient.PutAsync($"api/encounter/add/{monster.MonsterId}", encounterJson);
         }
 
         public async Task DeleteEncounter(Encounter encounter)

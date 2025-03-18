@@ -16,14 +16,14 @@ namespace DnDEncounterGenerator.Api.Controllers
 
         // GET: api/Encounter
         [HttpGet]
-        public ActionResult GetAllMonsters()
+        public ActionResult GetAllEncounters()
         {
             return Ok(_encounterRepository.GetAllEncounters());
         }
 
         // GET: api/Encounter/#
         [HttpGet("{id}")]
-        public IActionResult GetEmployeeById(int id)
+        public IActionResult GetEncounterById(int id)
         {
             return Ok(_encounterRepository.GetEncounterById(id));
         }
@@ -70,38 +70,62 @@ namespace DnDEncounterGenerator.Api.Controllers
             if (encounterToUpdate == null)
                 return NotFound();
 
-            encounter.Monsters.Add(new Monster { Name="Test"});
-
             _encounterRepository.UpdateEncounter(encounter);
 
             return NoContent(); //success
         }
 
-        //// PUT: api/Monster
-        //[HttpPut]
-        //public IActionResult AddMonsterToEncounter([FromBody] Encounter encounter)
-        //{
-        //    if (encounter == null)
-        //        return BadRequest();
+        // PUT: api/Monster/Add/1
+        [HttpPut("add/{id}")]
+        public IActionResult AddMonsterToEncounter([FromBody] Encounter encounter, int id)
+        {
+            if (encounter == null)
+                return BadRequest();
 
-        //    //This is not currently working.
-        //    if (encounter.Name == string.Empty)
-        //    {
-        //        ModelState.AddModelError("Name", "The name or shouldn't be empty");
-        //    }
+            //This is not currently working.
+            if (encounter.Name == string.Empty)
+            {
+                ModelState.AddModelError("Name", "The name or shouldn't be empty");
+            }
 
-        //    if (!ModelState.IsValid)
-        //        return BadRequest(ModelState);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-        //    var encounterToUpdate = _encounterRepository.GetEncounterById(encounter.EncounterId);
+            var encounterToUpdate = _encounterRepository.GetEncounterById(encounter.EncounterId);
 
-        //    if (encounterToUpdate == null)
-        //        return NotFound();
+            if (encounterToUpdate == null)
+                return NotFound();
 
-        //    _encounterRepository.AddMonsterToEncounter(encounter, monster);
+            _encounterRepository.AddMonsterToEncounter(encounter, id);
 
-        //    return NoContent(); //success
-        //}
+            return NoContent(); //success
+        }
+
+        // PUT: api/Monster/Add/1
+        [HttpPut("remove/{id}")]
+        public IActionResult RemoveMonsterFromEncounter([FromBody] Encounter encounter, int id)
+        {
+            if (encounter == null)
+                return BadRequest();
+
+            //This is not currently working.
+            if (encounter.Name == string.Empty)
+            {
+                ModelState.AddModelError("Name", "The name or shouldn't be empty");
+            }
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var encounterToUpdate = _encounterRepository.GetEncounterById(encounter.EncounterId);
+
+            if (encounterToUpdate == null)
+                return NotFound();
+
+            _encounterRepository.RemoveMonsterFromEncounter(encounter, id);
+
+            return NoContent(); //success
+        }
 
         // DELETE: api/Monster/#
         [HttpDelete("{id}")]

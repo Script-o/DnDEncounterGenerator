@@ -1,5 +1,7 @@
 ﻿using DnDEncounterGenerator.Api.Data;
 using DnDEncounterGenerator.Shared;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace DnDEncounterGenerator.Api.Models
 {
@@ -14,7 +16,9 @@ namespace DnDEncounterGenerator.Api.Models
 
         public IEnumerable<Encounter> GetAllEncounters()
         {
-            return _monsterDataContext.Encounters;
+            var encounters = _monsterDataContext.Encounters.Include(e => e.Monsters);
+
+            return encounters;
         }
 
         public Encounter GetEncounterById(int encounterId)
@@ -48,21 +52,37 @@ namespace DnDEncounterGenerator.Api.Models
             return null;
         }
 
-        //public Encounter AddMonsterToEncounter(Encounter encounter, Monster monster)
-        //{
-        //    var encounterToUpdate = _monsterDataContext.Encounters.FirstOrDefault(e => e.EncounterId == encounter.EncounterId);
-        //    var monsterToAdd = _monsterDataContext.Monsters.FirstOrDefault(e => e.MonsterId == monster.MonsterId);
+        public Encounter AddMonsterToEncounter(Encounter encounter, int id)
+        {
+            var foundEncounter = _monsterDataContext.Encounters.Include(e => e.Monsters).FirstOrDefault(e => e.EncounterId == encounter.EncounterId);
 
-        //    if (encounterToUpdate != null)
-        //    {
-        //        encounterToUpdate.Monsters.Add(monsterToAdd);
+            if (foundEncounter != null)
+            {
+                foundEncounter.Monsters.Add(_monsterDataContext.Monsters.FirstOrDefault(e => e.MonsterId == id));
 
-        //        _monsterDataContext.SaveChanges();
-        //        return encounterToUpdate;
-        //    }
+                _monsterDataContext.SaveChanges();
 
-        //    return null;
-        //}
+                return foundEncounter;
+            }
+
+            return null;
+        }
+
+        public Encounter RemoveMonsterFromEncounter(Encounter encounter, int id)
+        {
+            var foundEncounter = _monsterDataContext.Encounters.Include(e => e.Monsters).FirstOrDefault(e => e.EncounterId == encounter.EncounterId);
+
+            if (foundEncounter != null)
+            {
+                foundEncounter.Monsters.Remove(_monsterDataContext.Monsters.FirstOrDefault(e => e.MonsterId == id));
+
+                _monsterDataContext.SaveChanges();
+
+                return foundEncounter;
+            }
+
+            return null;
+        }
 
         public void DeleteEncounter(int encounterId)
         {
