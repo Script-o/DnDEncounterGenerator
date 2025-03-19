@@ -21,11 +21,15 @@ namespace DnDEncounterGenerator.Services
         }
 
         public async Task<Monster> GetMonsterById(Monster monster)
-        //public async Task<Monster> GetMonsterById(int monster)
         {
             return await JsonSerializer.DeserializeAsync<Monster>
                 (await _httpClient.GetStreamAsync($"api/monster/{monster.MonsterId}"), new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
-                //(await _httpClient.GetStreamAsync($"api/monster/{monster}"), new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+        }
+
+        public async Task<Monster> GetMonsterById(int monsterId)
+        {
+            return await JsonSerializer.DeserializeAsync<Monster>
+                (await _httpClient.GetStreamAsync($"api/monster/{monsterId}"), new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
         }
 
         public async Task<Monster> AddMonster(Monster monster)

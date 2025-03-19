@@ -7,7 +7,7 @@ namespace DnDEncounterGenerator.Services
         Task<IEnumerable<Monster>> GetAllMonsters();
 
         Task<Monster> GetMonsterById(Monster monster);
-        //Task<Monster> GetMonsterById(int monster);
+        Task<Monster> GetMonsterById(int monsterId);
 
         Task<Monster> AddMonster(Monster monster);
 

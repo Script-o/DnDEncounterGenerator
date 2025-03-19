@@ -2,6 +2,7 @@
 using System.Text.Json;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Query;
+using Microsoft.Extensions.Options;
 
 namespace DnDEncounterGenerator.Services
 {
@@ -35,7 +36,8 @@ namespace DnDEncounterGenerator.Services
 
             if (response.IsSuccessStatusCode)
             {
-                return await JsonSerializer.DeserializeAsync<Encounter>(await response.Content.ReadAsStreamAsync());
+                //return await JsonSerializer.DeserializeAsync<Encounter>(await response.Content.ReadAsStreamAsync());
+                return await JsonSerializer.DeserializeAsync<Encounter>(await response.Content.ReadAsStreamAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
             }
 
             return null;
