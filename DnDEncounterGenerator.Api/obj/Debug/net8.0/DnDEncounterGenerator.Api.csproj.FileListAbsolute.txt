@@ -159,10 +159,10 @@ D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\sta
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.DnDEncounterGenerator.Api.props
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.DnDEncounterGenerator.Api.props
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets.pack.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\DnDEncou.92D4CCF9.Up2Date
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\DnDEncounterGenerator.Api.dll
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\refint\DnDEncounterGenerator.Api.dll
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\DnDEncounterGenerator.Api.pdb
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\DnDEncounterGenerator.Api.genruntimeconfig.cache
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\ref\DnDEncounterGenerator.Api.dll
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

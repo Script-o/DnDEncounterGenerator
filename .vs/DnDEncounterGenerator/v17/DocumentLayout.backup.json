@@ -54,8 +54,7 @@
               "RelativeToolTip": "DnDEncounterGenerator.Api\\Models\\IEncounterRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T18:48:11.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T18:48:11.23Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "DnDEncounterGenerator.Api\\Models\\EncounterRepository.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwB8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T21:31:38.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T21:31:38.826Z"
             },
             {
               "$type": "Document",
@@ -80,8 +78,7 @@
               "RelativeToolTip": "DnDEncounterGenerator.Api\\Controllers\\EncounterController.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAwwDAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T21:37:07.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T21:37:07.348Z"
             },
             {
               "$type": "Document",
@@ -93,8 +90,7 @@
               "RelativeToolTip": "DnDEncounterGenerator\\DnDEncounterGenerator\\Services\\EncounterDataService.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAgwCgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T22:41:51.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-17T22:41:51.054Z"
             },
             {
               "$type": "Document",
@@ -104,7 +100,7 @@
               "RelativeDocumentMoniker": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\EncounterEditor.razor.cs",
               "ToolTip": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\EncounterEditor.razor.cs",
               "RelativeToolTip": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\EncounterEditor.razor.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAADwvycAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAADwvy0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T02:47:08.88Z",
               "EditorCaption": ""
@@ -119,8 +115,7 @@
               "RelativeToolTip": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditor.razor.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAwwCwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T15:00:43.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T15:00:43.401Z"
             },
             {
               "$type": "Document",
@@ -132,8 +127,7 @@
               "RelativeToolTip": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\EncounterEditor.razor",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAB6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-18T02:47:51.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T02:47:51.589Z"
             },
             {
               "$type": "Document",
@@ -145,8 +139,7 @@
               "RelativeToolTip": "DnDEncounterGenerator\\DnDEncounterGenerator\\Components\\Pages\\MonsterEditor.razor",
               "ViewState": "AgIAAGYAAAAAAAAAAAAAAI0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-19T14:59:52.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T14:59:52.218Z"
             }
           ]
         }
