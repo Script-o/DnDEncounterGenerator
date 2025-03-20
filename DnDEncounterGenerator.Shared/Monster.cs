@@ -20,5 +20,6 @@ namespace DnDEncounterGenerator.Shared
         public int Wisdom { get; set; }
         public int Charisma { get; set; }
         public double ChallengeRating { get; set; }
+        public List<Encounter> Encounters { get; set; } = new List<Encounter>();
     }
 }

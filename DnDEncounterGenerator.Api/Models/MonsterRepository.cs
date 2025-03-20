@@ -58,10 +58,10 @@ namespace DnDEncounterGenerator.Api.Models
 
         public void DeleteMonster(int monsterId)
         {
-            var foundEmployee = GetMonsterById(monsterId);
-            if (foundEmployee == null) return;
+            var foundMonster = GetMonsterById(monsterId);
+            if (foundMonster == null) return;
 
-            _monsterDataContext.Monsters.Remove(foundEmployee);
+            _monsterDataContext.Monsters.Remove(foundMonster);
             _monsterDataContext.SaveChanges();
         }
     }

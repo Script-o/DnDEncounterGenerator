@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21iYXRTdGF0aXN0aWNzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/PROJECTS/DnDEncounterGenerator/DnDEncounterGenerator/DnDEncounterGenerator/Components/Pages/EncounterEditor.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFbmNvdW50ZXJFZGl0b3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PROJECTS/DnDEncounterGenerator/DnDEncounterGenerator/DnDEncounterGenerator/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

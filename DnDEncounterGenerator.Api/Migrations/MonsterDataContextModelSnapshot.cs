@@ -16,6 +16,45 @@ namespace DnDEncounterGenerator.Api.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.3");
 
+            modelBuilder.Entity("DnDEncounterGenerator.Shared.Encounter", b =>
+                {
+                    b.Property<int>("EncounterId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("EncounterId");
+
+                    b.ToTable("Encounter", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            EncounterId = 1,
+                            Description = "This is an encounter with some goblins.",
+                            Name = "There Be Goblins"
+                        },
+                        new
+                        {
+                            EncounterId = 2,
+                            Description = "This is an encounter with some orcs.",
+                            Name = "Big Ol Orcs"
+                        },
+                        new
+                        {
+                            EncounterId = 3,
+                            Description = "This is an encounter with some kobolds.",
+                            Name = "Fearsom Kobolds"
+                        });
+                });
+
             modelBuilder.Entity("DnDEncounterGenerator.Shared.Monster", b =>
                 {
                     b.Property<int>("MonsterId")
@@ -106,6 +145,36 @@ namespace DnDEncounterGenerator.Api.Migrations
                             Strength = 10,
                             Wisdom = 10
                         });
+                });
+
+            modelBuilder.Entity("EncounterMonster", b =>
+                {
+                    b.Property<int>("EncountersEncounterId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("MonstersMonsterId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("EncountersEncounterId", "MonstersMonsterId");
+
+                    b.HasIndex("MonstersMonsterId");
+
+                    b.ToTable("EncounterMonster");
+                });
+
+            modelBuilder.Entity("EncounterMonster", b =>
+                {
+                    b.HasOne("DnDEncounterGenerator.Shared.Encounter", null)
+                        .WithMany()
+                        .HasForeignKey("EncountersEncounterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("DnDEncounterGenerator.Shared.Monster", null)
+                        .WithMany()
+                        .HasForeignKey("MonstersMonsterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

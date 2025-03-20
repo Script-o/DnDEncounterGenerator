@@ -57,6 +57,7 @@ namespace DnDEncounterGenerator.Components.Pages
         public async Task ShowEditForm(Monster ourMonster)
         {
             MonsterToUpdate = await MonsterDataService.GetMonsterById(ourMonster);
+            //MonsterToUpdate = await MonsterDataService.GetMonsterById(ourMonster.MonsterId);
             EditingId = ourMonster.MonsterId;
             EditRecord = true;
         }
@@ -65,6 +66,7 @@ namespace DnDEncounterGenerator.Components.Pages
         {
             EditRecord = false;
             Monster monster = await MonsterDataService.GetMonsterById(MonsterToUpdate);
+            //Monster monster = await MonsterDataService.GetMonsterById(MonsterToUpdate.MonsterId);
 
             if (monster is not null)
             {
@@ -74,12 +76,20 @@ namespace DnDEncounterGenerator.Components.Pages
             await ShowMonsters();
         }
 
+        public async Task CancelUpdate()
+        {
+            EditRecord = false;
+            await ShowMonsters();
+        }
+
         public async Task DeleteMonster(Monster ourMonster)
         {
             await MonsterDataService.DeleteMonster(ourMonster);
 
             await ShowMonsters();
         }
+
+        
 
 
 

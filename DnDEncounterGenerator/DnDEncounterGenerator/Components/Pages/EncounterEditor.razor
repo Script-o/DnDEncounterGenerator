@@ -1,0 +1,145 @@
+﻿@page "/EncounterEditor"
+
+<PageTitle>Monsters</PageTitle>
+
+@using Microsoft.EntityFrameworkCore
+
+@rendermode InteractiveServer
+
+@if (@ShowCreate)
+{
+    <h3>Add a New Encounter</h3>
+    <div class="row">
+        <label for="Name" class="col-4 col-form-label">Encounter Name</label>
+        <div class="col-8">
+            <input id="Name" name="Name" type="text" class="form-control" @bind="@NewEncounter.Name">
+        </div>
+    </div>
+    <div class="row">
+        <label for="Description" class="col-4 col-form-label">Encounter Description</label>
+        <div class="col-8">
+            <input id="Description" name="Description" type="text" class="form-control" @bind="@NewEncounter.Description">
+        </div>
+    </div>
+
+    <div class="row">
+        <label for="Monsters" class="col-4 col-form-label">Monsters in Encounter</label>
+        <div class="col-8">
+            @for (int i = 0; i < AllMonsters.Count; i++)
+            {
+                var monsterId = AllMonsters[i].MonsterId;
+                <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => AddMonsterToTempEncounter(monsterId)">@AllMonsters[i].Name</button></td>
+            }
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-primary" @onclick="CreateNewEncounter">Submit</button>
+        </div>
+    </div>
+}
+else
+{
+    <div class="form-group row">
+        <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-primary" @onclick="ShowCreateForm">Add a New Encounter</button>
+        </div>
+    </div>
+
+    @if (@CurrentEncounters is not null && @CurrentEncounters.Count > 0)
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered table-light border-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Monsters</th>
+
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var encounter in @CurrentEncounters)
+                    {
+                        @if (!@EditRecord)
+                        {
+                            <tr>
+                                <td>@encounter.Name</td>
+                                <td>@encounter.Description</td>
+                                <td>
+                                    @if (encounter.Monsters.Count > 0)
+                                    {
+                                        @for (int i = 0; i < encounter.Monsters.Count; i++)
+                                        {
+                                            @encounter.Monsters[i].Name
+
+                                            @if (encounter.Monsters.Count > i+1)
+                                            {
+                                                var comma = ", ";
+                                                @comma
+                                            }
+                                        }
+                                    }
+                                </td>
+
+                                <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => ShowEditForm(encounter)">Edit</button></td>
+                                <td> <button name="submit" type="submit" class="btn btn-danger" @onclick="() => DeleteEncounter(encounter)">Delete</button></td>
+                            </tr>
+                        }
+                        else
+                        {
+                            if (@EncounterToUpdate is not null && @EncounterToUpdate.EncounterId == @encounter.EncounterId)
+                            {
+                                <tr>
+                                    <td><input id="Name" name="Name" type="text" class="form-control" @bind="@EncounterToUpdate.Name" /></td>
+                                    <td><input id="Description" name="Description" type="text" class="form-control" @bind="@EncounterToUpdate.Description" /></td>
+                                    <td>
+                                        @if (encounter.Monsters.Count > 0)
+                                        {
+                                            @for (int i = 0; i < encounter.Monsters.Count; i++)
+                                            {
+                                                var monsterArrayNumber = i;
+                                            <td> <button name="submit" type="submit" class="btn btn-danger" @onclick="() => RemoveMonsterFromEncounter(monsterArrayNumber)">@encounter.Monsters[i].Name</button></td>
+                                            }
+                                        }
+                                        <td> <button name="submit" type="submit" class="btn btn-primary">+</button></td>
+                                    </td>
+                                    <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="@UpdateEncounter">Save</button></td>
+                                    <td> <button name="cancel" type="cancel" class="btn btn-danger" @onclick="@CancelUpdate">Cancel</button></td>
+                                </tr>
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td>@encounter.Name</td>
+                                    <td>@encounter.Description</td>
+                                    <td>
+                                        @if (encounter.Monsters.Count > 0)
+                                        {
+                                            @for (int i = 0; i < encounter.Monsters.Count; i++)
+                                            {
+                                                @encounter.Monsters[i].Name
+
+                                                @if (encounter.Monsters.Count > i + 1)
+                                                {
+                                                    var comma = ", ";
+                                                    @comma
+                                                }
+                                            }
+                                        }
+                                    </td>
+                                    <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => ShowEditForm(encounter)">Edit</button></td>
+                                    <td></td>
+                                </tr>
+                            }
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}

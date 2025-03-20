@@ -138,7 +138,7 @@ else
                                 <td>@monster.ChallengeRating</td>
 
                                 <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => ShowEditForm(monster)">Edit</button></td>
-                                <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => DeleteMonster(monster)">Delete</button></td>
+                                <td> <button name="submit" type="submit" class="btn btn-danger" @onclick="() => DeleteMonster(monster)">Delete</button></td>
                             </tr>
                         }
                         else
@@ -158,7 +158,7 @@ else
                                     <td><input id="Charisma" name="Charisma" type="text" class="form-control" @bind="@MonsterToUpdate.Charisma" /></td>
                                     <td><input id="ChallengeRating" name="ChallengeRating" type="text" class="form-control" @bind="@MonsterToUpdate.ChallengeRating" /></td>
                                     <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="@UpdateMonster">Save</button></td>
-                                    <td></td>
+                                    <td> <button name="cancel" type="cancel" class="btn btn-danger" @onclick="@CancelUpdate">Cancel</button></td>
                                 </tr>
                             }
                             else
@@ -176,7 +176,7 @@ else
                                     <td>@monster.Charisma</td>
                                     <td>@monster.ChallengeRating</td>
                                     <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => ShowEditForm(monster)">Edit</button></td>
-                                    <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => DeleteMonster(monster)">Delete</button></td>
+                                    <td></td>
                                 </tr>
                             }
                         }

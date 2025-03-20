@@ -15,6 +15,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddRazorPages();
 
 builder.Services.AddHttpClient<IMonsterDataService, MonsterDataService>(client => client.BaseAddress = new Uri("https://localhost:44340"));
+builder.Services.AddHttpClient<IEncounterDataService, EncounterDataService>(client => client.BaseAddress = new Uri("https://localhost:44340"));
 
 var app = builder.Build();
 
