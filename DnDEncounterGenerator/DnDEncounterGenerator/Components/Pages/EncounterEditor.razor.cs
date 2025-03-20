@@ -13,10 +13,12 @@ namespace DnDEncounterGenerator.Components.Pages
         public IMonsterDataService MonsterDataService { get; set; }
 
         public bool ShowCreate { get; set; }
+        public bool ShowEdit { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
             ShowCreate = false;
+            ShowEdit = false;
             await ShowEncounters();
             await ShowAllMonsters();
         }
@@ -32,6 +34,13 @@ namespace DnDEncounterGenerator.Components.Pages
             ShowCreate = true;
         }
 
+        public void ShowFullEditForm(Encounter encounter)
+        {
+            EncounterToUpdate = encounter;
+            MonsterHolderEncounter = new Encounter();
+            ShowEdit = true;
+        }
+
         public async Task CreateNewEncounter()
         {
             if (NewEncounter is not null)
@@ -40,7 +49,7 @@ namespace DnDEncounterGenerator.Components.Pages
                 NewEncounter = updatedEncounter;
             }
 
-            await AddMonstersToEncounter();
+            await AddMonstersToEncounter(NewEncounter);
 
 
 
@@ -55,13 +64,13 @@ namespace DnDEncounterGenerator.Components.Pages
             MonsterHolderEncounter.Monsters.Add(monsterToAdd);
         }
 
-        public async Task AddMonstersToEncounter()
+        public async Task AddMonstersToEncounter(Encounter existingEncounter)
         {
-            Encounter encounter = await EncounterDataService.GetEncounterById(NewEncounter);
+            Encounter encounter = await EncounterDataService.GetEncounterById(existingEncounter);
 
             foreach(var monster in MonsterHolderEncounter.Monsters)
             {
-                await EncounterDataService.AddMonsterToEncounter(NewEncounter, monster);
+                await EncounterDataService.AddMonsterToEncounter(existingEncounter, monster);
             }
 
             ShowCreate = false;
@@ -82,6 +91,9 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public async Task ShowEditForm(Encounter ourEncounter)
         {
+            //NewEncounter = new Encounter();
+            MonsterHolderEncounter = new Encounter();
+
             EncounterToUpdate = await EncounterDataService.GetEncounterById(ourEncounter);
             EditingId = ourEncounter.EncounterId;
             EditRecord = true;
@@ -97,11 +109,17 @@ namespace DnDEncounterGenerator.Components.Pages
         public async Task UpdateEncounter()
         {
             EditRecord = false;
+            ShowEdit = false;
             Encounter encounter = await EncounterDataService.GetEncounterById(EncounterToUpdate);
 
             if (encounter is not null)
             {
                 await EncounterDataService.UpdateEncounter(EncounterToUpdate);
+            }
+
+            if (MonsterHolderEncounter is not null)
+            {
+                await AddMonstersToEncounter(EncounterToUpdate);
             }
 
             await ShowEncounters();
@@ -115,15 +133,15 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public Monster? MonsterToUpdate { get; set; }
 
-        public async Task RemoveMonsterFromEncounter(int MonsterEncounterIdPosition)
+        public async Task RemoveMonsterFromEncounter(int monsterId)
         {
             Encounter encounter = await EncounterDataService.GetEncounterById(EncounterToUpdate);
 
-            Monster monsterToRemove = await MonsterDataService.GetMonsterById(EncounterToUpdate.Monsters[MonsterEncounterIdPosition]);
+            Monster monsterToRemove = await MonsterDataService.GetMonsterById(monsterId);
 
             if (encounter is not null && monsterToRemove is not null)
             {
-                await EncounterDataService.RemoveMonsterFromEncounter(EncounterToUpdate, monsterToRemove);
+                await EncounterDataService.RemoveMonsterFromEncounter(encounter, monsterToRemove);
             }
 
             ShowCreate = false;
