@@ -39,12 +39,12 @@ The program has 6 NuGet packages installed
    
    Ensure Startup Projects are set correctly:
    ```
-   Project 						 | Action 	| Debug Target
-   DnDEncounterGenerator 		 | Start 	| IIS Express
-   DNDEncounterGenerator.Api 	 | Start 	| IIS Express
-   DNDEncounterGenerator.Client  | None 	| 
-   DNDEncounterGenerator.Console | None 	| 
-   DNDEncounterGenerator.Shared  | None 	| 
+   Project  | Action | Debug Target
+   DnDEncounterGenerator   | Start |   IIS Express
+   DNDEncounterGenerator.Api  | Start 	|  IIS Express
+   DNDEncounterGenerator.Client  | None   | 
+   DNDEncounterGenerator.Console | None   | 
+   DNDEncounterGenerator.Shared  | None   | 
    ```
 
 ### Basic Operation
@@ -134,5 +134,5 @@ This project meets the Code:You capstone requirements in the following ways:
 
 ## Acknowledgments
 
-- The DnDBeyond website for monster data
 - Code:You which gave me the opportunity to learn C# and create this project
+- The DnDBeyond website for monster data
