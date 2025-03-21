@@ -19,9 +19,6 @@ namespace DnDEncounterGenerator.Components.Pages
         {
             ShowCreate = false;
             await ShowMonsters();
-
-            // --- For testing a dynamic way to fill the tables ---
-            //await GetAllAttributesFromObject();
         }
 
         public Monster? NewMonster { get; set; }
@@ -57,7 +54,6 @@ namespace DnDEncounterGenerator.Components.Pages
         public async Task ShowEditForm(Monster ourMonster)
         {
             MonsterToUpdate = await MonsterDataService.GetMonsterById(ourMonster);
-            //MonsterToUpdate = await MonsterDataService.GetMonsterById(ourMonster.MonsterId);
             EditingId = ourMonster.MonsterId;
             EditRecord = true;
         }
@@ -66,7 +62,6 @@ namespace DnDEncounterGenerator.Components.Pages
         {
             EditRecord = false;
             Monster monster = await MonsterDataService.GetMonsterById(MonsterToUpdate);
-            //Monster monster = await MonsterDataService.GetMonsterById(MonsterToUpdate.MonsterId);
 
             if (monster is not null)
             {
@@ -87,44 +82,6 @@ namespace DnDEncounterGenerator.Components.Pages
             await MonsterDataService.DeleteMonster(ourMonster);
 
             await ShowMonsters();
-        }
-
-        
-
-
-
-
-
-        // --- Below is an experiment to try and loop all of the attributes of an object ---
-        public Monster? MonsterToCheck { get; set; }
-
-        public List<string> ListOfAttributes { get; set; }
-        public List<PropertyInfo> ListOfAttributes2 { get; set; }
-
-        public PropertyInfo instance {get; set;}
-
-        public async Task GetAllAttributesFromObject()
-        {
-            //_context ??= await MonsterContextFactory.CreateDbContextAsync();
-            //MonsterToCheck = _context.Monsters.FirstOrDefault(x => x.MonsterId == 1);
-
-
-
-            //var monsterJson = JsonSerializer.Serialize(MonsterToCheck);
-
-
-
-
-            //var tempList = new List<string>();
-            //var attributeList = new List<PropertyInfo>();
-
-            //foreach (PropertyInfo propertyInfo in MonsterToCheck.GetType().GetProperties())
-            //{
-            //    tempList.Add(propertyInfo.Name);
-            //    attributeList.Add(propertyInfo);
-            //}
-            //ListOfAttributes = tempList;
-            //ListOfAttributes2 = attributeList;
         }
     }
 }

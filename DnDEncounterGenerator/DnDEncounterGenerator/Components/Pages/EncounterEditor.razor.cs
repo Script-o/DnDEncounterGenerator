@@ -98,7 +98,6 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public async Task ShowEditForm(Encounter ourEncounter)
         {
-            //NewEncounter = new Encounter();
             MonsterHolderEncounter = new Encounter();
 
             EncounterToUpdate = await EncounterDataService.GetEncounterById(ourEncounter);
