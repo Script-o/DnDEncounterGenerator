@@ -21,17 +21,19 @@
             <input id="Description" name="Description" type="text" class="form-control" @bind="@NewEncounter.Description">
         </div>
     </div>
-
+    
     <div class="row">
         <label for="Monsters" class="col-4 col-form-label">Monsters in Encounter</label>
         <div class="col-8">
             @for (int i = 0; i < AllMonsters.Count; i++)
             {
                 var monsterId = AllMonsters[i].MonsterId;
-                <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => AddMonsterToTempEncounter(monsterId)">@AllMonsters[i].Name</button></td>
+                <div style="display:inline-block"> <button name="submit" type="submit" class="btn btn-primary" @onclick="(() => {AddMonsterToTempEncounter(monsterId); ChangeMonsterButtonText(monsterId);})">@AllMonsters[i].Name</button></div>
             }
         </div>
     </div>
+
+    <br />
 
     <div class="form-group row">
         <div class="offset-4 col-8">
@@ -56,17 +58,19 @@ else
                 <input id="Description" name="Description" type="text" class="form-control" @bind="@EncounterToUpdate.Description">
             </div>
         </div>
-
+        
         <div class="row">
             <label for="Monsters" class="col-4 col-form-label">Monsters in Encounter</label>
             <div class="col-8">
                 @for (int i = 0; i < AllMonsters.Count; i++)
                 {
                     var monsterId = AllMonsters[i].MonsterId;
-                    <td> <button name="submit" type="submit" class="btn btn-primary" @onclick="() => AddMonsterToTempEncounter(monsterId)">@AllMonsters[i].Name</button></td>
+                    <div style="display:inline-block"> <button name="submit" type="submit" class="btn btn-primary" @onclick="(() => {AddMonsterToTempEncounter(monsterId); ChangeMonsterButtonText(monsterId);})">@AllMonsters[i].Name</button></div>
                 }
             </div>
         </div>
+
+        <br />
 
         <div class="form-group row">
             <div class="offset-4 col-8">

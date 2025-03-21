@@ -1,6 +1,3 @@
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\bin\Debug\net8.0\DnDEncounterGenerator.Shared.deps.json
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\bin\Debug\net8.0\DnDEncounterGenerator.Shared.runtimeconfig.json
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\bin\Debug\net8.0\DnDEncounterGenerator.Shared.exe
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\bin\Debug\net8.0\appsettings.Development.json
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\bin\Debug\net8.0\appsettings.json
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\bin\Debug\net8.0\DnDEncounterGenerator.Api.staticwebassets.endpoints.json

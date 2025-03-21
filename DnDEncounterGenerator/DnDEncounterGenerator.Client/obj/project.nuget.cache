@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BTFtQcauZjI=",
+  "dgSpecHash": "JbzqKDKLBDE=",
   "success": true,
   "projectFilePath": "D:\\PROJECTS\\DnDEncounterGenerator\\DnDEncounterGenerator\\DnDEncounterGenerator.Client\\DnDEncounterGenerator.Client.csproj",
   "expectedPackageFiles": [
@@ -30,7 +30,7 @@
     "C:\\Users\\Jon\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.13\\microsoft.net.illink.tasks.8.0.13.nupkg.sha512",
     "C:\\Users\\Jon\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.2\\microsoft.net.sdk.webassembly.pack.9.0.2.nupkg.sha512",
     "C:\\Users\\Jon\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
-    "C:\\Users\\Jon\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.13\\microsoft.netcore.app.runtime.mono.browser-wasm.8.0.13.nupkg.sha512"
+    "C:\\Users\\Jon\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.14\\microsoft.netcore.app.runtime.mono.browser-wasm.8.0.14.nupkg.sha512"
   ],
   "logs": []
 }

@@ -34,7 +34,7 @@ namespace DnDEncounterGenerator.Components.Pages
             ShowCreateForm();
 
             // Hit Points
-            string pattern = @"Hit Points\s*\d*";
+            string pattern = @"(Hit Points|HP)\s*\d*";
 
             Regex rg = new Regex(pattern);
 
@@ -58,7 +58,7 @@ namespace DnDEncounterGenerator.Components.Pages
             }
 
             // Armor Class
-            pattern = @"Armor Class\s*\d*";
+            pattern = @"(Armor Class|AC)\s*\d*";
 
             rg = new Regex(pattern);
 
@@ -250,7 +250,7 @@ namespace DnDEncounterGenerator.Components.Pages
             }
 
             // Challenge Rating
-            pattern = @"Challenge\s*\d*";
+            pattern = @"(Challenge|CR)\s*\d*";
 
             rg = new Regex(pattern);
 

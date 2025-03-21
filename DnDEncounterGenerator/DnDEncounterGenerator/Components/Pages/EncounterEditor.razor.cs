@@ -64,6 +64,13 @@ namespace DnDEncounterGenerator.Components.Pages
             MonsterHolderEncounter.Monsters.Add(monsterToAdd);
         }
 
+        public async Task ChangeMonsterButtonText(int monsterId)
+        {
+            Monster monsterToChangeName = await MonsterDataService.GetMonsterById(monsterId);
+            AllMonsters.FirstOrDefault(m => m.MonsterId == monsterToChangeName.MonsterId).Name = "Added";
+            StateHasChanged();
+        }
+
         public async Task AddMonstersToEncounter(Encounter existingEncounter)
         {
             Encounter encounter = await EncounterDataService.GetEncounterById(existingEncounter);
