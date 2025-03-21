@@ -39,12 +39,13 @@ The program has 6 NuGet packages installed
    
    Ensure Startup Projects are set correctly:
    ```
-   Project  | Action | Debug Target
-   DnDEncounterGenerator   | Start |   IIS Express
-   DNDEncounterGenerator.Api  | Start 	|  IIS Express
-   DNDEncounterGenerator.Client  | None   | 
-   DNDEncounterGenerator.Console | None   | 
-   DNDEncounterGenerator.Shared  | None   | 
+   | Project | Action | Debug Target |
+   | --- | --- | --- |
+   | DnDEncounterGenerator | Start | IIS Express |
+   | DNDEncounterGenerator.Api  | Start | IIS Express |
+   | DNDEncounterGenerator.Client  | None |  |
+   | DNDEncounterGenerator.Console | None |  |
+   | DNDEncounterGenerator.Shared  | None |  |
    ```
 
 ### Basic Operation
