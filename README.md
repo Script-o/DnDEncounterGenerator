@@ -38,7 +38,7 @@ The program has 6 NuGet packages installed
    ```
    
    Ensure Startup Projects are set correctly:
-   ```
+
    | Project | Action | Debug Target |
    | --- | --- | --- |
    | DnDEncounterGenerator | Start | IIS Express |
@@ -46,7 +46,6 @@ The program has 6 NuGet packages installed
    | DNDEncounterGenerator.Client  | None |  |
    | DNDEncounterGenerator.Console | None |  |
    | DNDEncounterGenerator.Shared  | None |  |
-   ```
 
 ### Basic Operation
 
