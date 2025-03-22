@@ -1,6 +1,1 @@
 @DnDEncounterGenerator.Api_HostAddress = http://localhost:5099
-
-GET {{DnDEncounterGenerator.Api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

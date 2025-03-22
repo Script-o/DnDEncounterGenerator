@@ -52,7 +52,7 @@ namespace DnDEncounterGenerator.Components.Pages
             await AddMonstersToEncounter(NewEncounter);
 
 
-
+            await ShowAllMonsters();
             ShowCreate = false;
             await ShowEncounters();
         }
