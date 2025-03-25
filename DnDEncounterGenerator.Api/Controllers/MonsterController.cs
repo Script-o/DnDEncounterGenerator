@@ -72,9 +72,9 @@ namespace DnDEncounterGenerator.Api.Controllers
             if (monsterToUpdate == null)
                 return NotFound();
 
-            _monsterRepository.UpdateMonster(monster);
+            var updatedMonster = _monsterRepository.UpdateMonster(monster);
 
-            return NoContent(); //success
+            return Created("monster", updatedMonster);
         }
 
         // DELETE: api/Monster/#

@@ -47,12 +47,19 @@ namespace DnDEncounterGenerator.Services
             return null;
         }
 
-        public async Task UpdateMonster(Monster monster)
+        public async Task<Monster> UpdateMonster(Monster monster)
         {
             var monsterJson =
                 new StringContent(JsonSerializer.Serialize(monster), Encoding.UTF8, "application/json");
 
-            await _httpClient.PutAsync("api/monster", monsterJson);
+            var response = await _httpClient.PutAsync("api/monster", monsterJson);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return await JsonSerializer.DeserializeAsync<Monster>(await response.Content.ReadAsStreamAsync());
+            }
+
+            return null;
         }
 
         public async Task DeleteMonster(Monster monster)

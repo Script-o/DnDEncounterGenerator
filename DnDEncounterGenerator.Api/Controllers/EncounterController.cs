@@ -70,9 +70,9 @@ namespace DnDEncounterGenerator.Api.Controllers
             if (encounterToUpdate == null)
                 return NotFound();
 
-            _encounterRepository.UpdateEncounter(encounter);
+            var updatedEncounter = _encounterRepository.UpdateEncounter(encounter);
 
-            return NoContent(); //success
+            return Created("encounter", updatedEncounter);
         }
 
         // PUT: api/Monster/Add/1
@@ -96,9 +96,9 @@ namespace DnDEncounterGenerator.Api.Controllers
             if (encounterToUpdate == null)
                 return NotFound();
 
-            _encounterRepository.AddMonsterToEncounter(encounter, id);
+            var updatedEncounter = _encounterRepository.AddMonsterToEncounter(encounter, id);
 
-            return NoContent(); //success
+            return Created("encounter", updatedEncounter);
         }
 
         // PUT: api/Monster/Remove/1
@@ -122,9 +122,9 @@ namespace DnDEncounterGenerator.Api.Controllers
             if (encounterToUpdate == null)
                 return NotFound();
 
-            _encounterRepository.RemoveMonsterFromEncounter(encounter, id);
+            var updatedEncounter = _encounterRepository.RemoveMonsterFromEncounter(encounter, id);
 
-            return NoContent(); //success
+            return Created("encounter", updatedEncounter);
         }
 
         // DELETE: api/Monster/#

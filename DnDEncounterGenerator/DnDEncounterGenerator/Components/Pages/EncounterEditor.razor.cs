@@ -15,6 +15,8 @@ namespace DnDEncounterGenerator.Components.Pages
         public bool ShowCreate { get; set; }
         public bool ShowEdit { get; set; }
 
+        public string DatabaseRequestMessage { get; set; }
+
         protected override async Task OnInitializedAsync()
         {
             ShowCreate = false;
@@ -27,17 +29,21 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public Encounter? MonsterHolderEncounter { get; set; }
 
-        public void ShowCreateForm()
+        public async Task ShowCreateForm()
         {
             NewEncounter = new Encounter();
             MonsterHolderEncounter = new Encounter();
+            DatabaseRequestMessage = "";
+            await ShowAllMonsters();
             ShowCreate = true;
         }
 
-        public void ShowFullEditForm(Encounter encounter)
+        public async Task ShowFullEditForm(Encounter encounter)
         {
             EncounterToUpdate = encounter;
             MonsterHolderEncounter = new Encounter();
+            DatabaseRequestMessage = "";
+            await ShowAllMonsters();
             ShowEdit = true;
         }
 
@@ -45,16 +51,23 @@ namespace DnDEncounterGenerator.Components.Pages
         {
             if (NewEncounter is not null)
             {
-                var updatedEncounter = await EncounterDataService.AddEncounter(NewEncounter);
-                NewEncounter = updatedEncounter;
+                var addedEncounter = await EncounterDataService.AddEncounter(NewEncounter);
+                
+                if (addedEncounter is not null)
+                {
+                    NewEncounter = addedEncounter;
+
+                    await AddMonstersToEncounter(NewEncounter);
+
+                    EditRecord = false;
+                    ShowCreate = false;
+                    await ShowEncounters();
+                }
+                else
+                {
+                    DatabaseRequestMessage = "Sorry, one of the above fields needs to be corrected";
+                }
             }
-
-            await AddMonstersToEncounter(NewEncounter);
-
-
-            await ShowAllMonsters();
-            ShowCreate = false;
-            await ShowEncounters();
         }
 
         public async Task AddMonsterToTempEncounter(int monsterId)
@@ -73,11 +86,14 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public async Task AddMonstersToEncounter(Encounter existingEncounter)
         {
-            Encounter encounter = await EncounterDataService.GetEncounterById(existingEncounter);
-
-            foreach(var monster in MonsterHolderEncounter.Monsters)
+            if (existingEncounter is not null)
             {
-                await EncounterDataService.AddMonsterToEncounter(existingEncounter, monster);
+                Encounter encounter = await EncounterDataService.GetEncounterById(existingEncounter);
+
+                foreach (var monster in MonsterHolderEncounter.Monsters)
+                {
+                    await EncounterDataService.AddMonsterToEncounter(existingEncounter, monster);
+                }
             }
 
             ShowCreate = false;
@@ -114,21 +130,28 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public async Task UpdateEncounter()
         {
-            EditRecord = false;
-            ShowEdit = false;
             Encounter encounter = await EncounterDataService.GetEncounterById(EncounterToUpdate);
 
             if (encounter is not null)
             {
-                await EncounterDataService.UpdateEncounter(EncounterToUpdate);
-            }
+                var addedEncounter = await EncounterDataService.UpdateEncounter(EncounterToUpdate);
 
-            if (MonsterHolderEncounter is not null)
-            {
-                await AddMonstersToEncounter(EncounterToUpdate);
-            }
+                if (addedEncounter is not null)
+                {
+                    if (MonsterHolderEncounter is not null)
+                    {
+                        await AddMonstersToEncounter(EncounterToUpdate);
+                    }
 
-            await ShowEncounters();
+                    EditRecord = false;
+                    ShowEdit = false;
+                    await ShowEncounters();
+                }
+                else
+                {
+                    DatabaseRequestMessage = "Sorry, one of the above fields needs to be corrected";
+                }
+            }  
         }
 
         public async Task CancelUpdate()

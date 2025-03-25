@@ -36,27 +36,40 @@ namespace DnDEncounterGenerator.Services
 
             if (response.IsSuccessStatusCode)
             {
-                //return await JsonSerializer.DeserializeAsync<Encounter>(await response.Content.ReadAsStreamAsync());
                 return await JsonSerializer.DeserializeAsync<Encounter>(await response.Content.ReadAsStreamAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
             }
 
             return null;
         }
 
-        public async Task UpdateEncounter(Encounter encounter)
+        public async Task<Encounter> UpdateEncounter(Encounter encounter)
         {
             var encounterJson =
                 new StringContent(JsonSerializer.Serialize(encounter), Encoding.UTF8, "application/json");
 
-            await _httpClient.PutAsync("api/encounter", encounterJson);
+            var response = await _httpClient.PutAsync("api/encounter", encounterJson);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return await JsonSerializer.DeserializeAsync<Encounter>(await response.Content.ReadAsStreamAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            }
+
+            return null;
         }
 
-        public async Task AddMonsterToEncounter(Encounter encounter, Monster monster)
+        public async Task<Encounter> AddMonsterToEncounter(Encounter encounter, Monster monster)
         {
             var encounterJson =
                new StringContent(JsonSerializer.Serialize(encounter), Encoding.UTF8, "application/json");
 
-            await _httpClient.PutAsync($"api/encounter/add/{monster.MonsterId}", encounterJson);
+            var response = await _httpClient.PutAsync($"api/encounter/add/{monster.MonsterId}", encounterJson);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return await JsonSerializer.DeserializeAsync<Encounter>(await response.Content.ReadAsStreamAsync(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            }
+
+            return null;
         }
 
         public async Task RemoveMonsterFromEncounter(Encounter encounter, Monster monster)

@@ -11,7 +11,7 @@ namespace DnDEncounterGenerator.Services
 
         Task<Monster> AddMonster(Monster monster);
 
-        Task UpdateMonster(Monster monster);
+        Task<Monster> UpdateMonster(Monster monster);
 
         Task DeleteMonster(Monster monster);
     }

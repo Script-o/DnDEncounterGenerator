@@ -12,9 +12,9 @@ namespace DnDEncounterGenerator.Services
 
         Task<Encounter> AddEncounter(Encounter encounter);
 
-        Task UpdateEncounter(Encounter encounter);
+        Task<Encounter> UpdateEncounter(Encounter encounter);
 
-        Task AddMonsterToEncounter(Encounter encounter, Monster monster);
+        Task<Encounter> AddMonsterToEncounter(Encounter encounter, Monster monster);
 
         Task RemoveMonsterFromEncounter(Encounter encounter, Monster monster);
 

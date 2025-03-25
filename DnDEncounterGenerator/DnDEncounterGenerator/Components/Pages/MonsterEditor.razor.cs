@@ -15,6 +15,8 @@ namespace DnDEncounterGenerator.Components.Pages
 
         public bool ShowCreate { get; set; }
 
+        public string DatabaseRequestMessage { get; set; }
+
         protected override async Task OnInitializedAsync()
         {
             ShowCreate = false;
@@ -26,6 +28,7 @@ namespace DnDEncounterGenerator.Components.Pages
         public void ShowCreateForm()
         {
             NewMonster = new Monster();
+            DatabaseRequestMessage = "";
             ShowCreate = true;
         }
 
@@ -33,10 +36,18 @@ namespace DnDEncounterGenerator.Components.Pages
         {
             if (NewMonster is not null)
             {
-                await MonsterDataService.AddMonster(NewMonster);
+                var addedMonster = await MonsterDataService.AddMonster(NewMonster);
+
+                if (addedMonster is not null)
+                {
+                    ShowCreate = false;
+                    await ShowMonsters();
+                }
+                else
+                {
+                    DatabaseRequestMessage = "Sorry, one of the above fields needs to be corrected";
+                }
             }
-            ShowCreate = false;
-            await ShowMonsters();
         }
 
         public List<Monster>? OurMonsters { get; set; }
