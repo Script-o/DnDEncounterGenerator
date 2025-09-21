@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DnDEncounterGenerator.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2df49abd353ac8ab326a981c86cc0519d5b4b71")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a19a42c0ac58f5ba8f333bd38257aca518eaa160")]
 [assembly: System.Reflection.AssemblyProductAttribute("DnDEncounterGenerator.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DnDEncounterGenerator.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

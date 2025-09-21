@@ -150,12 +150,6 @@ D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\sco
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets.build.json
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets.development.json
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets\msbuild.DnDEncounterGenerator.Api.Microsoft.AspNetCore.StaticWebAssets.props
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets\msbuild.DnDEncounterGenerator.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets\msbuild.build.DnDEncounterGenerator.Api.props
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.DnDEncounterGenerator.Api.props
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.DnDEncounterGenerator.Api.props
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets.pack.json
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\DnDEncou.92D4CCF9.Up2Date
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\DnDEncounterGenerator.Api.dll
@@ -163,3 +157,8 @@ D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\ref
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\DnDEncounterGenerator.Api.pdb
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\DnDEncounterGenerator.Api.genruntimeconfig.cache
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\ref\DnDEncounterGenerator.Api.dll
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator.Api\obj\Debug\net8.0\staticwebassets.build.json.cache
