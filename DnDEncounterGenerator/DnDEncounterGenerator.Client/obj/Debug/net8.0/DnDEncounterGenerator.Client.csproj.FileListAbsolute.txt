@@ -1030,7 +1030,7 @@ D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Cl
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\compressed\5fv7o3i3un-q34fwb6a9a.gz
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\compressed\fle8r5nv5b-5xyxcxd807.gz
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\compressed\l5ej2rplg8-71cgy4v0iu.gz
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\compressed\91mrozx8j7-knp07t7mak.gz
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\compressed\m0xms5rajr-2uxya9x5p9.gz
-D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\compressed\yucu5ie6nm-dr6d7bxonh.gz
 D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\compressed\91mrozx8j7-zp7lw8vbmj.gz
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\compressed\m0xms5rajr-tjx7yg5zl0.gz
+D:\PROJECTS\DnDEncounterGenerator\DnDEncounterGenerator\DnDEncounterGenerator.Client\obj\Debug\net8.0\compressed\yucu5ie6nm-d8gjs1hc8u.gz
